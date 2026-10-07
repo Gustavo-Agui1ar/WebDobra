@@ -1,4 +1,31 @@
+
 import OrigamiFold from "./origami_simple_fold.js";
+import { injectCSS } from "./utils.js";
+
+injectCSS("../css/carousel.css");
+
+function loadCSS(path) {
+
+    // Evita carregar o mesmo CSS duas vezes
+    if (document.querySelector(`link[href="${path}"]`)) {
+        return;
+    }
+
+    const link = document.createElement("link");
+
+    link.rel = "stylesheet";
+    link.href = path;
+
+    document.head.appendChild(link);
+}
+
+
+// CSS do Carousel
+loadCSS("../css/carousel.css");
+
+// CSS utilizado pelo Origami
+loadCSS("../css/origami_simple_fold.css");
+
 
 export default class Carousel {
 
@@ -9,7 +36,6 @@ export default class Carousel {
 
         this.currentIndex = 0;
 
-        // Configurações
         this.autoplay =
             element.dataset.autoplay === "true";
 
@@ -40,6 +66,7 @@ export default class Carousel {
         switch (item.type) {
 
             case "image":
+
                 return `
                     <img
                         src="${item.image}"
@@ -48,12 +75,15 @@ export default class Carousel {
                 `;
 
             case "html":
+
                 return item.content;
 
             case "origami":
+
                 return new OrigamiFold(item).render();
 
             default:
+
                 return "";
         }
     }
@@ -71,14 +101,18 @@ export default class Carousel {
                     type="button"
                     class="carousel-prev"
                     aria-label="Slide anterior">
+
                     <i class="fa-solid fa-chevron-left"></i>
+
                 </button>
 
                 <button
                     type="button"
                     class="carousel-next"
                     aria-label="Próximo slide">
+
                     <i class="fa-solid fa-chevron-right"></i>
+
                 </button>
             ` : ""}
 
@@ -91,10 +125,14 @@ export default class Carousel {
         `;
 
         this.track =
-            this.carousel.querySelector(".carousel-track");
+            this.carousel.querySelector(
+                ".carousel-track"
+            );
 
         this.dotsContainer =
-            this.carousel.querySelector(".carousel-dots");
+            this.carousel.querySelector(
+                ".carousel-dots"
+            );
 
         this.items.forEach((item, index) => {
 
@@ -110,11 +148,18 @@ export default class Carousel {
 
                     ${this.showTitle && item.title ? `
                         <div class="carousel-content">
-                            <h2>${item.title}</h2>
 
-                            ${this.showDescription && item.description ? `
-                                <p>${item.description}</p>
+                            <h2>
+                                ${item.title}
+                            </h2>
+
+                            ${this.showDescription &&
+                            item.description ? `
+                                <p>
+                                    ${item.description}
+                                </p>
                             ` : ""}
+
                         </div>
                     ` : ""}
 
@@ -151,6 +196,7 @@ export default class Carousel {
                 : [];
 
         this.bindEvents();
+
         this.update();
     }
 
@@ -160,29 +206,33 @@ export default class Carousel {
 
             this.carousel
                 .querySelector(".carousel-next")
-                .addEventListener("click", () => {
-                    this.next();
-                });
+                .addEventListener(
+                    "click",
+                    () => this.next()
+                );
 
             this.carousel
                 .querySelector(".carousel-prev")
-                .addEventListener("click", () => {
-                    this.previous();
-                });
+                .addEventListener(
+                    "click",
+                    () => this.previous()
+                );
         }
 
         if (this.showDots) {
 
             this.dots.forEach(dot => {
 
-                dot.addEventListener("click", () => {
+                dot.addEventListener(
+                    "click",
+                    () => {
 
-                    this.currentIndex =
-                        Number(dot.dataset.index);
+                        this.currentIndex =
+                            Number(dot.dataset.index);
 
-                    this.update();
-                });
-
+                        this.update();
+                    }
+                );
             });
         }
     }
@@ -199,8 +249,11 @@ export default class Carousel {
     previous() {
 
         this.currentIndex =
-            (this.currentIndex - 1 +
-                this.items.length) %
+            (
+                this.currentIndex -
+                1 +
+                this.items.length
+            ) %
             this.items.length;
 
         this.update();
@@ -213,25 +266,39 @@ export default class Carousel {
 
         if (this.showDots) {
 
-            this.dots.forEach((dot, index) => {
+            this.dots.forEach(
+                (dot, index) => {
 
-                dot.classList.toggle(
-                    "active",
-                    index === this.currentIndex
-                );
+                    dot.classList.toggle(
+                        "active",
+                        index === this.currentIndex
+                    );
 
-            });
+                }
+            );
         }
 
-        if (this.slides && this.slides.length > 0) {
-            
-            const currentSlide = this.slides[this.currentIndex];
-            const animatedParts = currentSlide.querySelectorAll('.origami-part');
-            
+        if (
+            this.slides &&
+            this.slides.length > 0
+        ) {
+
+            const currentSlide =
+                this.slides[this.currentIndex];
+
+            const animatedParts =
+                currentSlide.querySelectorAll(
+                    ".origami-part"
+                );
+
             animatedParts.forEach(part => {
-                part.style.animation = 'none';
+
+                part.style.animation = "none";
+
                 void part.offsetWidth;
-                part.style.animation = '';
+
+                part.style.animation = "";
+
             });
         }
     }
@@ -242,8 +309,9 @@ export default class Carousel {
             return;
         }
 
-        setInterval(() => {
-            this.next();
-        }, this.interval);
+        setInterval(
+            () => this.next(),
+            this.interval
+        );
     }
 }
