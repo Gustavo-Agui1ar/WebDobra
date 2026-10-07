@@ -1,5 +1,7 @@
+import OrigamiFold from "./origami_simple_fold.js";
+
 export default class Carousel {
-    
+
     constructor(element, items) {
 
         this.carousel = element;
@@ -48,6 +50,9 @@ export default class Carousel {
             case "html":
                 return item.content;
 
+            case "origami":
+                return new OrigamiFold(item).render();
+
             default:
                 return "";
         }
@@ -90,7 +95,6 @@ export default class Carousel {
 
         this.dotsContainer =
             this.carousel.querySelector(".carousel-dots");
-
 
         this.items.forEach((item, index) => {
 
@@ -216,6 +220,18 @@ export default class Carousel {
                     index === this.currentIndex
                 );
 
+            });
+        }
+
+        if (this.slides && this.slides.length > 0) {
+            
+            const currentSlide = this.slides[this.currentIndex];
+            const animatedParts = currentSlide.querySelectorAll('.origami-part');
+            
+            animatedParts.forEach(part => {
+                part.style.animation = 'none';
+                void part.offsetWidth;
+                part.style.animation = '';
             });
         }
     }

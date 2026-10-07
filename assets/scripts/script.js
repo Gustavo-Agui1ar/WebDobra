@@ -3,30 +3,30 @@ import Carousel from "./carrosel.js";
 const carousels = {
     "banner-principal": [
         {
-            type: "image",
-            image: "https://picsum.photos/id/1015/1200/600",
-            title: "Montanhas",
-            description: "Paisagem montanhosa."
-        },
-        {
-            type: "image",
-            image: "https://picsum.photos/id/1016/1200/600",
-            title: "Floresta",
-            description: "Área de mata."
-        },
-        {
-            type: "html",
+            type: "origami",
             title: "Aprenda Origami",
-            description: "Dobre o papel passo a passo.",
-            content: `
-                <div class="origami-slide">
-                    <div class="origami-paper">
-                        <div class="paper-half paper-left"></div>
-                        <div class="fold-line"></div>
-                        <div class="paper-half paper-right"></div>
-                    </div>
-                </div>
-            `
+            description: "Dobre o papel ao meio.",
+            width: 300,
+            height: 200,
+            position: 50,
+            direction: "vertical",
+            color: "#2196F3",
+            duration: 3000,
+            foldLineColor: "black",
+            shadow: true
+        },
+        {
+            type: "origami",
+            title: "Aprenda Origami",
+            description: "Dobre o papel ao meio.",
+            width: 150,
+            height: 200,
+            position:50,
+            direction: "horizontal",
+            color: "#2196F3",
+            duration: 3000,
+            foldLineColor: "black",
+            shadow: true
         }
     ]
 };
