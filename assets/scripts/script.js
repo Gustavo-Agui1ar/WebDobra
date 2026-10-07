@@ -1,5 +1,7 @@
 import Carousel from "./carrosel.js";
 
+const paper_color = "#2196F3"; 
+
 const carousels = {
     "banner-principal": [
         {
@@ -10,7 +12,7 @@ const carousels = {
             height: 200,
             position: 50,
             direction: "vertical",
-            color: "#2196F3",
+            color: paper_color,
             duration: 3000,
             foldLineColor: "black",
             shadow: true
@@ -23,7 +25,7 @@ const carousels = {
             height: 200,
             position:50,
             direction: "horizontal",
-            color: "#2196F3",
+            color: paper_color,
             duration: 3000,
             foldLineColor: "black",
             shadow: true

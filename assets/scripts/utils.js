@@ -8,6 +8,3 @@ export function injectCSS(relativePath) {
         document.head.appendChild(link);
     }
 }
-
-injectCSS("../css/carrosel.css");
-injectCSS("../css/origami_teste.css");

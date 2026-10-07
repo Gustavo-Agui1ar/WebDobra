@@ -2,31 +2,7 @@
 import OrigamiFold from "./origami_simple_fold.js";
 import { injectCSS } from "./utils.js";
 
-injectCSS("../css/carousel.css");
-
-function loadCSS(path) {
-
-    // Evita carregar o mesmo CSS duas vezes
-    if (document.querySelector(`link[href="${path}"]`)) {
-        return;
-    }
-
-    const link = document.createElement("link");
-
-    link.rel = "stylesheet";
-    link.href = path;
-
-    document.head.appendChild(link);
-}
-
-
-// CSS do Carousel
-loadCSS("../css/carousel.css");
-
-// CSS utilizado pelo Origami
-loadCSS("../css/origami_simple_fold.css");
-
-
+injectCSS("../css/carrosel.css");
 export default class Carousel {
 
     constructor(element, items) {
