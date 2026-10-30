@@ -1,87 +1,305 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* ==========================================
+   1. ATRIBUTOS CSS GLOBAIS (VARIÁVEIS)
+   ========================================== */
+:root {
+  /* Cores de Texto e Fundo */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-text-main: #222222;
+  --color-text-muted: #666666;
+  --color-bg-page: #f7f8fc;
+  --color-bg-card: #ffffff;
+  --color-bg-subtle: #f8f9fa;
+  --color-header-bg: #e2e8ef;
+  --color-footer-bg: #f8f9fa;
+
+  /* Cores de Bordas */
+  --color-border-light: #e0e0e0;
+  --color-border-dashed: #cccccc;
+
+  /* Cores Temáticas de Modos e Ações */
+  --color-danger: #f44336;
+  --color-danger-hover: #d32f2f;
+  --color-easy: #4caf50;
+  --color-easy-bg: #f0fdf4;
+  --color-medium: #e4bf06;
+  --color-medium-bg: #fff8e1;
+  --color-hard: #f44336;
+  --color-hard-bg: #fff5f5;
+  --color-loop: #9c27b0;
+  --color-loop-bg: #f3e5f5;
+
+  /* Espaçamentos e Gaps Padronizados */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 40px;
+
+  /* Raios de Borda (Border Radius) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+
+  /* Sombras e Transições */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.25s ease;
+
+  /* Tipografia */
+  --font-main: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+/* ==========================================
+   2. RESET E CONFIGURAÇÕES BASE
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-page);
+  background-image: url('../imgs/background.svg');
+  background-repeat: repeat-x repeat-y;
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    color: #6c757d;
-    font-size: 0.9rem;
-    margin-top: auto;
+/* ==========================================
+   3. ESTILIZAÇÃO BASE DE BOTÕES E MODIFICADORES
+   ========================================== */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-base),
+              transform var(--transition-base),
+              opacity var(--transition-base),
+              box-shadow var(--transition-base);
 }
 
+button:hover:not(:disabled),
+input[type="button"]:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active:not(:disabled),
+input[type="button"]:active:not(:disabled),
+input[type="submit"]:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible {
+  outline: 3px solid var(--color-text-main);
+  outline-offset: 3px;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Modificadores Temáticos */
+.btn-primary {
+  background-color: var(--color-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--color-danger-hover);
+}
+
+/* Override para o botão do menu (ícone sem fundo padrão de botão) */
+.menu-toggle {
+  background: none;
+  box-shadow: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+}
+
+.menu-toggle:hover:not(:disabled) {
+  transform: none;
+  box-shadow: none;
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   4. CABEÇALHO (HEADER) E LOGO
+   ========================================== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    min-height: 10dvh;
-    background-color: #e2e8ef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-header-bg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
 }
 
-header img {
-    width: 10dvh;
-    height: auto;
-    border-radius: 50%;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
 }
 
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    font-size: 24px;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 0.5rem;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #007BFF;
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: #333;
-    text-align: left;
+  font-size: 1.5rem;
+  color: var(--color-text-main);
 }
 
+.menu-toggle {
+  display: none;
+}
 
-.logo {
+/* ==========================================
+   5. NAVEGAÇÃO
+   ========================================== */
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: color var(--transition-fast);
+}
+
+header nav ul li a:hover,
+.active {
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   6. RODAPÉ (FOOTER)
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-footer-bg);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ==========================================
+   7. RESPONSIVIDADE DO CABEÇALHO (MENU HAMBÚRGUER)
+   ========================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-}
+    justify-content: center;
+  }
 
-.active {
-    color: #007BFF;
+  /* Transição suave de rotação para o ícone */
+  .menu-toggle i {
+    transition: transform var(--transition-base);
+  }
+
+  .menu-toggle[aria-expanded="true"] i {
+    transform: rotate(90deg);
+  }
+
+  /* Estrutura do dropdown com animação de slide + fade */
+  header nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-header-bg);
+    box-shadow: var(--shadow-md);
+    padding: 1rem 0;
+    z-index: 1000;
+
+    /* Estado fechado (animável) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: opacity var(--transition-base),
+                transform var(--transition-base),
+                visibility var(--transition-base);
+  }
+
+  /* Estado aberto ativado via JS */
+  header nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header nav ul li a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
 }

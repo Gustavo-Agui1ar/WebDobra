@@ -1,0 +1,153 @@
+/* ==========================================
+   1. CONTAINER PRINCIPAL DO CARROSSEL
+   ========================================== */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================
+   2. TRILHO E SLIDES
+   ========================================== */
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 400px;
+  background-color: var(--color-bg-subtle);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================
+   3. CONTEÚDO E SOBREPOSIÇÃO (OVERLAY)
+   ========================================== */
+.carousel-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-md);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.carousel-content h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.carousel-content p {
+  margin-top: var(--space-xs);
+  font-size: 1.1rem;
+  color: var(--color-border-light);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   4. BOTÕES DE NAVEGAÇÃO (ANTERIOR / PRÓXIMO)
+   ========================================== */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  
+  color: var(--color-text-main);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  color: var(--color-primary);
+  background-color: var(--color-bg-card);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel-prev:active,
+.carousel-next:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-prev {
+  left: var(--space-sm);
+}
+
+.carousel-next {
+  right: var(--space-sm);
+}
+
+/* ==========================================
+   5. INDICADORES (DOTS)
+   ========================================== */
+.carousel-dots {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--color-bg-card);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              transform var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15);
+}
+
+.carousel-dot.active {
+  background-color: var(--color-primary);
+  border-color: #ffffff;
+  transform: scale(1.3);
+}
