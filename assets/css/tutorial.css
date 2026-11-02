@@ -1,0 +1,151 @@
+.tutorial-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 var(--space-md);
+}
+
+/* CABEÇALHO */
+.tutorial-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  background: var(--color-bg-card);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  gap: var(--space-lg);
+}
+
+.tutorial-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-header h2 {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.tutorial-header p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+}
+
+.tutorial-header img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 320px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  object-fit: contain;
+  cursor: zoom-in;
+  background-color: var(--color-bg-subtle, #f8f9fa);
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .tutorial-header {
+    flex-direction: row;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .tutorial-header-info {
+    flex: 1;
+    padding-right: var(--space-lg);
+  }
+
+  .tutorial-header h2 {
+    align-self: flex-start;
+  }
+}
+
+/* CARDS DOS PASSOS */
+.step-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  gap: var(--space-lg);
+}
+
+.step-content h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.5rem;
+}
+
+.step-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-text-main);
+}
+
+@media (min-width: 768px) {
+  .step-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .step-content,
+  .step-media {
+    flex: 1;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: var(--space-md);
+  }
+
+  .step-media {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* FONTES */
+.tutorial-sources {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 2px dashed var(--color-border-dashed);
+}
+
+.tutorial-sources ul {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-xs);
+}
+
+.tutorial-sources a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.tutorial-sources a:hover {
+  text-decoration: underline;
+}
+
+/* CARREGAMENTO E ERRO */
+#error-message {
+  text-align: center;
+  padding: var(--space-xl);
+  font-size: 1.2rem;
+}
+
+#error-message {
+  color: var(--color-danger);
+}
