@@ -45,7 +45,6 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   object-fit: contain;
-  cursor: zoom-in;
   background-color: var(--color-bg-subtle, #f8f9fa);
   padding: 10px;
 }
