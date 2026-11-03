@@ -1,0 +1,28 @@
+[
+  {
+    "id": "animais",
+    "title": "Animais",
+    "description": "Explore os origamis de animais disponíveis, desde modelos clássicos até interativos.",
+    "image": "../assets/data/tutorials/frog/imgs/frog-step-23.png",
+    "items": [
+      {
+        "id": "frog",
+        "title": "Sapo de Papel",
+        "difficulty": "facil",
+        "difficultyLabel": "Fácil",
+        "time": "5-10 min",
+        "steps": 23,
+        "description": "Um clássico origami interativo. Pressione a parte traseira para fazê-lo saltar!",
+        "image": "../assets/data/tutorials/frog/imgs/frog-step-23.png",
+        "url": "tutorial.html?origami=frog"
+      }
+    ]
+  },
+  {
+    "id": "flores",
+    "title": "Flores e Plantas",
+    "description": "Modelos delicados inspirados na natureza e arranjos florais.",
+    "image": "",
+    "items": []
+  }
+]

@@ -1,0 +1,167 @@
+{
+  "nome": "Sapo que pula",
+  "tempo": "10 minutos",
+  "folha": "15x15 cm (Kami)",
+  "dificuldade": "facil",
+  "descricao": "<p>O sapo saltador de origami é um modelo clássico que existe desde pelo menos a década de 1960, frequentemente associado a Lillian Oppenheimer e Shari Lewis. Sua principal característica é a capacidade de saltar quando pressionamos suas costas, tornando-o um modelo divertido e interativo.</p><p>Sua montagem utiliza dobras simples, mas o papel fica mais espesso nas etapas finais. Pequenas imperfeições são normais e não comprometem o resultado, desde que o sapo consiga realizar seu movimento de salto.</p>",
+  "imagem": "tutorials/frog/imgs/frog-step-23.png",
+  "video_completo": "https://www.youtube.com/embed/lXif_rtsvpE",
+  "passos": [
+    {
+      "numero": 1,
+      "descricao": "Comece com um pedaço de papel retangular. Dobre o canto superior direito na diagonal.",
+      "imagem": "tutorials/frog/imgs/frog-step-1.png",
+      "animacao": {
+        "type": "origami",
+        "direction": "horizontal",
+        "position": 50,
+        "width": 300,
+        "height": 300,
+        "color": "#81C784",
+        "duration": 2500
+      }
+    },
+    {
+      "numero": 2,
+      "descricao": "Desdobre e repita o processo com o canto superior esquerdo.",
+      "imagem": "tutorials/frog/imgs/frog-step-2.png",
+      "animacao": {
+        "type": "origami",
+        "direction": "vertical",
+        "position": 50,
+        "width": 300,
+        "height": 300,
+        "color": "#81C784",
+        "duration": 2500
+      }
+    },
+    {
+      "numero": 3,
+      "descricao": "Desdobre novamente. Você verá um vinco em formato de 'X' na parte superior.",
+      "imagem": "tutorials/frog/imgs/frog-step-3.png",
+      "animacao": {
+        "type": "origami",
+        "direction": "vertical",
+        "position": 50,
+        "width": 150,
+        "height": 300,
+        "color": "#81C784",
+        "duration": 2500
+      },
+      "video": "tutorials/frog/videos/frog-step-3.mp4"
+    },
+    {
+      "numero": 4,
+      "descricao": "Dobre a parte superior do papel para trás, exatamente no centro do 'X'.",
+      "imagem": "tutorials/frog/imgs/frog-step-4.png"
+    },
+    {
+      "numero": 5,
+      "descricao": "Desdobre e empurre as laterais do 'X' para dentro, formando um triângulo no topo.",
+      "imagem": "tutorials/frog/imgs/frog-step-5.png",
+      "video": "tutorials/frog/videos/frog-step-5.mp4"
+    },
+    {
+      "numero": 6,
+      "descricao": "Pressione bem para achatar o triângulo (esta é a Base Bomba d'Água).",
+      "imagem": "tutorials/frog/imgs/frog-step-6.png"
+    },
+    {
+      "numero": 7,
+      "descricao": "Dobre a ponta direita do triângulo para cima, em direção ao topo.",
+      "imagem": "tutorials/frog/imgs/frog-step-7.png",
+      "animacao": {
+        "type": "origami",
+        "direction": "horizontal",
+        "position": 75,
+        "width": 150,
+        "height": 300,
+        "color": "#81C784",
+        "duration": 2500
+      }
+    },
+    {
+      "numero": 8,
+      "descricao": "Dobre a ponta esquerda do triângulo para cima, igualando o lado direito.",
+      "imagem": "tutorials/frog/imgs/frog-step-8.png"
+    },
+    {
+      "numero": 9,
+      "descricao": "Dobre a borda lateral direita da parte inferior em direção ao centro.",
+      "imagem": "tutorials/frog/imgs/frog-step-9.png"
+    },
+    {
+      "numero": 10,
+      "descricao": "Dobre a borda lateral esquerda em direção ao centro.",
+      "imagem": "tutorials/frog/imgs/frog-step-10.png"
+    },
+    {
+      "numero": 11,
+      "descricao": "Dobre a base do papel para cima, até a linha onde começa o triângulo superior.",
+      "imagem": "tutorials/frog/imgs/frog-step-11.png"
+    },
+    {
+      "numero": 12,
+      "descricao": "Dobre a parte que você acabou de subir de volta para baixo, alinhando com a base.",
+      "imagem": "tutorials/frog/imgs/frog-step-12.png"
+    },
+    {
+      "numero": 13,
+      "descricao": "Abra as duas abas inferiores para os lados, formando a base das patas traseiras.",
+      "imagem": "tutorials/frog/imgs/frog-step-13.png"
+    },
+    {
+      "numero": 14,
+      "descricao": "Puxe as pontas de baixo para fora e para baixo em um formato de barco.",
+      "imagem": "tutorials/frog/imgs/frog-step-14.png"
+    },
+    {
+      "numero": 15,
+      "descricao": "Dobre as pontas esquerdas e direitas desse 'barco' para baixo em um ângulo.",
+      "imagem": "tutorials/frog/imgs/frog-step-15.png"
+    },
+    {
+      "numero": 16,
+      "descricao": "Dobre as pontinhas das pernas dianteiras (no topo) ligeiramente para fora.",
+      "imagem": "tutorials/frog/imgs/frog-step-16.png"
+    },
+    {
+      "numero": 17,
+      "descricao": "Agora, dobre a metade inferior do corpo inteiro do sapo para cima.",
+      "imagem": "tutorials/frog/imgs/frog-step-17.png"
+    },
+    {
+      "numero": 18,
+      "descricao": "Dobre as patas traseiras de volta para baixo, criando uma dobra tipo sanfona.",
+      "imagem": "tutorials/frog/imgs/frog-step-18.png"
+    },
+    {
+      "numero": 19,
+      "descricao": "Pressione bem firmemente esta última dobra. É ela que fará a 'mola' do sapo.",
+      "imagem": "tutorials/frog/imgs/frog-step-19.png",
+      "video": "tutorials/frog/videos/frog-step-19-sanfona.mp4"
+    },
+    {
+      "numero": 20,
+      "descricao": "Vire o sapo para que as costas fiquem voltadas para cima.",
+      "imagem": "tutorials/frog/imgs/frog-step-20.png"
+    },
+    {
+      "numero": 21,
+      "descricao": "Faça pequenos ajustes nas patas para garantir que ele fique equilibrado.",
+      "imagem": "tutorials/frog/imgs/frog-step-21.png"
+    },
+    {
+      "numero": 22,
+      "descricao": "Pronto! Pressione a dobra da mola nas costas com o dedo e deslize para trás para vê-lo pular.",
+      "imagem": "tutorials/frog/imgs/frog-step-22.png",
+      "video": "tutorials/frog/videos/frog-step-22-pulo.mp4"
+    }
+  ],
+  "fontes": [
+    {
+      "nome": "Origami Próprio",
+      "url": "https://exemplo.com"
+    }
+  ]
+}

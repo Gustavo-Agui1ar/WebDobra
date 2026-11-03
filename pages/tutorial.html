@@ -1,29 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/tutorial.css" />
+    <script type="module" src="../assets/scripts/tutorial.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/carrosel.css" />
+    <script type="module" src="../assets/scripts/carrosel.js" defer></script>
+
+    <title>Tutorial - WebDobra</title>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="../assets/imgs/logo.png" alt="Logo">
-            <h1>WebDobra</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="game.html">Jogo</a></li>
-                <li><a href="map.html">Mapa</a></li>
-                <li><a href="category.html" class="active">Categorias</a></li>
-                <li><a href="history.html">Histórias</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="../assets/imgs/logo.png" alt="Logo WebDobra" />
+        <h1>WebDobra</h1>
+      </div>
+
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        id="mobile-menu-btn"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="game.html">Jogo</a></li>
+          <li><a href="map.html">Mapa</a></li>
+          <li><a href="category.html">Categorias</a></li>
+          <li><a href="history.html">Histórias</a></li>
+        </ul>
+      </nav>
     </header>
+
+    <main class="tutorial-container">
+      <header class="tutorial-header">
+        <div class="tutorial-header-top">
+          <div class="tutorial-header-info">
+            <h2 id="tutorial-title"></h2>
+            <div id="tutorial-description" class="tutorial-description"></div>
+            <div class="tutorial-header-info">
+              <h2>O que precisa?</h2>
+              <ul class="tutorial-meta-list">
+                <li><strong>Folha:</strong> <span id="meta-folha"></span></li>
+                <li><strong>Tempo:</strong> <span id="meta-tempo"></span></li>
+                <li>
+                  <strong>Dificuldade:</strong>
+                  <span id="meta-dificuldade"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <figure class="tutorial-main-figure">
+            <img id="tutorial-main-image" src="" alt="" />
+          </figure>
+        </div>
+
+        <section
+          id="tutorial-video-container"
+          class="tutorial-video-section"
+          aria-label="Vídeo do tutorial completo"
+        ></section>
+      </header>
+
+      <section
+        id="tutorial-steps-container"
+        class="tutorial-steps"
+        aria-label="Passos do tutorial"
+      ></section>
+
+      <footer id="tutorial-sources-container" class="tutorial-sources">
+        <h3>Fontes e Referências</h3>
+        <ul id="tutorial-sources-list"></ul>
+      </footer>
+    </main>
+
     <footer>
-        <p>&copy; 2026 WebDobra. All rights reserved.</p>
+      <p>&copy; 2026 WebDobra. All rights reserved.</p>
     </footer>
-</body>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+/* ==========================================
+   PÁGINA DE CATEGORIAS (SEMÂNTICA E REFINADA)
+   ========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.main-content {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Grades de cards */
+.categories-grid,
+.origamis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Cabeçalho de listagem */
+.origami-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.origami-header h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
+
+.btn-back {
+  color: var(--color-primary);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background-color var(--transition-base);
+}
+
+.btn-back:hover:not(:disabled) {
+  background-color: var(--color-bg-subtle);
+}
+
+/* Estrutura do Card */
+/* ---------- Card com Canto Realmente Dobrado (Cutout Dog-ear) ---------- */
+.card {
+  --fold: 32px; /* Tamanho do canto dobrado */
+  --paper-page-bg: var(--color-bg-body, var(--color-bg-subtle, #f8f9fa));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+
+  clip-path: polygon(var(--fold) 0%, 100% 0%, 100% 100%, 0% 100%, 0% var(--fold));
+
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--fold);
+  height: var(--fold);
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(
+      135deg,
+      var(--paper-page-bg) 0%,
+      var(--paper-page-bg) calc(50% - 0.5px),
+      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% - 0.5px),
+      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% + 0.5px),
+      rgba(0, 0, 0, 0.12) calc(50% + 0.5px),
+      rgba(0, 0, 0, 0.02) 80%
+    );
+  border: 2px solid var(--color-border-light);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.card:hover::after {
+  --fold: 40px; /* Expande levemente a dobra ao passar o mouse */
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  outline-offset: 2px;
+}
+
+/* Área de Mídia (Imagem ou Placeholder) */
+.card-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: var(--space-sm);
+  background-color: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-light);
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  border-radius: calc(var(--radius-md) - 4px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.card-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Evita ícone colado no texto */
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* Conteúdo interno do Card */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.card-subtitle {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Linha de Metadados com espaçamento seguro */
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-sm);
+  margin-top: var(--space-xs);
+  padding-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 2px dashed var(--color-border-light);
+}
+
+.card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espaço adequado entre o ícone e o texto do tempo/passos */
+}
+
+/* Cores e Badges de Dificuldade */
+.main-content {
+  --difficulty-easy: #1b8a4b;
+  --difficulty-medium: #b26a00;
+  --difficulty-hard: var(--color-danger);
+}
+
+.badge {
+  --badge: var(--color-text-muted);
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--badge);
+  background-color: color-mix(in srgb, var(--badge) 12%, transparent);
+  border: 1px solid var(--badge);
+  border-radius: 999px;
+}
+
+.badge.facil {
+  --badge: var(--difficulty-easy);
+}
+
+.badge.medio {
+  --badge: var(--difficulty-medium);
+}
+
+.badge.dificil {
+  --badge: var(--difficulty-hard);
+}
+
+/* Estado Vazio */
+.empty-state {
+  grid-column: 1 / -1;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-card);
+  border: 2px dashed var(--color-border-dashed);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
