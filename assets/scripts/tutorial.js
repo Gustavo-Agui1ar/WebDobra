@@ -30,7 +30,7 @@ function createCarouselItems(passo) {
   if (passo.imagem) {
     items.push({
       type: "image",
-      image: `../assets/imgs/${passo.imagem}`,
+      image: `../assets/data/${passo.imagem}`,
       title: `Passo ${passo.numero}`,
       description: passo.descricao
     });
@@ -46,9 +46,11 @@ function createCarouselItems(passo) {
   }
 
   if (passo.video) {
+    const videoPath = `../assets/data/${passo.video}`;
     items.push({
       type: "video",
-      video: `../assets/imgs/${passo.video}`,
+      video: videoPath,
+      src: videoPath, 
       title: `Passo ${passo.numero} (Vídeo)`,
       description: passo.descricao
     });
@@ -132,25 +134,59 @@ function initLazyCarousels(carouselsConfig) {
 // 6. CARREGAMENTO DO TUTORIAL
 // ==========================================
 async function loadTutorial() {
-  const query = window.location.search.substring(1);
-  
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('origami');
+
   if (!query || /[^a-zA-Z0-9_-]/.test(query)) return;
 
   try {
-    const response = await fetch(`../assets/data/tutorials/${query}.json`);
+    const response = await fetch(`../assets/data/tutorials/${query}/${query}.json`);
     if (!response.ok) return;
     
     const data = await response.json();
     if (!data?.nome || !Array.isArray(data.passos)) return;
 
     doc.title.textContent = data.nome;
-    doc.description.textContent = data.descricao;
-    doc.mainImage.src = `../assets/imgs/${data.imagem}`;
+    doc.description.innerHTML = data.descricao;
+    doc.mainImage.src = `../assets/data/${data.imagem}`;
     doc.mainImage.alt = `Imagem final do ${data.nome}`;
     doc.mainImage.style.display = "inline-block";
 
+    // Preencher o card "O que precisa?"
+    document.getElementById("meta-folha").textContent = data.folha || "Não informado";
+    document.getElementById("meta-tempo").textContent = data.tempo || "Não informado";
+
+    const diffContainer = document.getElementById("meta-dificuldade");
+    if (data.dificuldade) {
+      const diffClass = data.dificuldade.toLowerCase();
+      const diffText = data.dificuldade.charAt(0).toUpperCase() + data.dificuldade.slice(1);
+      diffContainer.innerHTML = `<span class="badge ${diffClass}">${diffText}</span>`;
+    } else {
+      diffContainer.textContent = "Não informado";
+    }
+
     const fragment = document.createDocumentFragment();
     const carouselsToInit = [];
+
+    const videoContainer = document.getElementById("tutorial-video-container");
+
+    if (videoContainer) {
+      if (data.video_completo) {
+        videoContainer.innerHTML = `
+          <div class="video-wrapper">
+            <iframe 
+              src="${data.video_completo}" 
+              title="Vídeo Tutorial Completo - ${data.nome}" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        `;
+        videoContainer.style.display = "block";
+      } else {
+        videoContainer.style.display = "none";
+      }
+    }
 
     data.passos.forEach((passo, index) => {
       fragment.appendChild(createStepCard(passo, index));

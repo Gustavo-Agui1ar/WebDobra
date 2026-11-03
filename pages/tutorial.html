@@ -47,22 +47,46 @@
     </header>
 
     <main class="tutorial-container">
-      <article id="tutorial-content">
-        <header class="tutorial-header">
+      <header class="tutorial-header">
+        <div class="tutorial-header-top">
           <div class="tutorial-header-info">
             <h2 id="tutorial-title"></h2>
-            <p id="tutorial-description"></p>
+            <div id="tutorial-description" class="tutorial-description"></div>
+            <div class="tutorial-header-info">
+              <h2>O que precisa?</h2>
+              <ul class="tutorial-meta-list">
+                <li><strong>Folha:</strong> <span id="meta-folha"></span></li>
+                <li><strong>Tempo:</strong> <span id="meta-tempo"></span></li>
+                <li>
+                  <strong>Dificuldade:</strong>
+                  <span id="meta-dificuldade"></span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <img id="tutorial-main-image" src="" alt="Resultado Final" />
-        </header>
 
-        <section id="tutorial-steps-container"></section>
+          <figure class="tutorial-main-figure">
+            <img id="tutorial-main-image" src="" alt="" />
+          </figure>
+        </div>
 
-        <footer class="tutorial-sources" id="tutorial-sources-container">
-          <h3>Fontes Consultadas:</h3>
-          <ul id="tutorial-sources-list"></ul>
-        </footer>
-      </article>
+        <section
+          id="tutorial-video-container"
+          class="tutorial-video-section"
+          aria-label="Vídeo do tutorial completo"
+        ></section>
+      </header>
+
+      <section
+        id="tutorial-steps-container"
+        class="tutorial-steps"
+        aria-label="Passos do tutorial"
+      ></section>
+
+      <footer id="tutorial-sources-container" class="tutorial-sources">
+        <h3>Fontes e Referências</h3>
+        <ul id="tutorial-sources-list"></ul>
+      </footer>
     </main>
 
     <footer>

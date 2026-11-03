@@ -6,6 +6,7 @@
   --color-primary: #007bff;
   --color-primary-hover: #0056b3;
   --color-text-main: #222222;
+  --color-border-solid: #aaa3a3;
   --color-text-muted: #666666;
   --color-bg-page: #f7f8fc;
   --color-bg-card: #ffffff;
@@ -55,8 +56,9 @@ body {
   font-family: var(--font-main);
   color: var(--color-text-main);
   background-color: var(--color-bg-page);
-  background-image: url('../imgs/background.svg');
-  background-repeat: repeat;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), 
+    url('../imgs/background.svg');  background-repeat: repeat;
 }
 
 main {

@@ -50,6 +50,8 @@ export default class Carousel {
                 return `<img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title || '')}" loading="lazy">`;
             case "html":
                 return item.content || "";
+            case "video":
+                return `<video src="${escapeHTML(item.video || item.src)}" controls preload="metadata" style="width:100%; height:100%; object-fit:contain;"></video>`;
             case "origami":
                 return new OrigamiFold(item).render();
             default:
