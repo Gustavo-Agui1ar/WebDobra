@@ -122,17 +122,16 @@
 .tutorial-main-figure {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 340px;
+  max-width: 360px;
   margin: 0;
 }
 
 .tutorial-main-figure img {
   width: 100%;
-  max-height: 300px;
   height: auto;
-  object-fit: contain;
-  padding: 12px;
+  object-fit: fill;
   background: var(--color-bg-subtle, #f8f9fa);
 }
 
