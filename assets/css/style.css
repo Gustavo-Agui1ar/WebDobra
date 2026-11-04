@@ -2,22 +2,21 @@
    1. VARIÁVEIS GLOBAIS
    ========================================== */
 :root {
-  /* Cores */
-  --color-primary: #007bff;
-  --color-primary-hover: #0056b3;
-  --color-text-main: #222222;
-  --color-border-solid: #aaa3a3;
-  --color-text-muted: #666666;
-  --color-bg-page: #f7f8fc;
+/* Cores - Momiji (Outono) */
+  --color-primary: #c95c27;       /* Laranja ferrugem/Folha de outono */
+  --color-primary-hover: #a3471c;
+  --color-text-main: #3e2723;     /* Castanho escuro em vez de preto */
+  --color-border-solid: #e0bfae;
+  --color-text-muted: #8d6e63;
+  --color-bg-page: #fdfaf7;       /* Branco aquecido/pêssego muito claro */
   --color-bg-card: #ffffff;
-  --color-bg-subtle: #f8f9fa;
-  --color-header-bg: #e2e8ef;
-  --color-footer-bg: #f8f9fa;
-  --color-border-light: #e0e0e0;
-  --color-border-dashed: #cccccc;
-  --color-danger: #f44336;
-  --color-danger-hover: #d32f2f;
-
+  --color-bg-subtle: #fcf6f2;
+  --color-header-bg: #f3e5db;
+  --color-footer-bg: #f3e5db;
+  --color-border-light: #ead7cc;
+  --color-border-dashed: #e0bfae;
+  --color-danger: #d32f2f;
+  --color-danger-hover: #b71c1c;
   /* Espaçamento */
   --space-xs: 8px;
   --space-sm: 12px;

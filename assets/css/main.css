@@ -1,0 +1,306 @@
+/* ---------- 1. CONTAINER E CAMADAS BASE ---------- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, var(--space-md));
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: clamp(0.75rem, 2vw, var(--space-md)) 1.25rem var(--space-xl);
+}
+
+.layer {
+  position: relative;
+  min-width: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+/* Modificadores de Cor de Fundo */
+.bg-white  { background-color: var(--color-bg-card); }
+.bg-subtle { background-color: var(--color-bg-subtle); }
+
+.bg-accent {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-hover) 100%
+  );
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-lg);
+}
+
+/* Tipografia Comum das Camadas */
+.layer-content h2,
+.layer-header h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.35rem, 1rem + 1.8vw, 2.1rem);
+  line-height: 1.25;
+  color: var(--color-text-main);
+}
+
+.layer-content p,
+.layer-header p {
+  margin-bottom: 1.25rem;
+  font-size: clamp(0.92rem, 0.88rem + 0.25vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.layer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.85rem clamp(1.35rem, 4vw, 2rem);
+  background-color: #ffffff;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.layer-link:hover {
+  color: var(--color-primary-hover);
+  gap: var(--space-sm);
+}
+
+/* ---------- 2. CAMADA DIVIDIDA (FUNDAMENTOS) ---------- */
+.split-layer {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(1.75rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+}
+
+.layer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.layer-media {
+  flex: 0 1 40%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.layer-media img {
+  max-width: 65%;
+  max-height: 65%;
+  object-fit: contain;
+}
+
+/* ---------- 3. CAMADA DE CARDS (TUTORIAIS) ---------- */
+.block-layer {
+  padding: clamp(1.75rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+}
+
+.layer-header {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto clamp(1.25rem, 3.5vw, 2.5rem);
+}
+
+.origamis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card-media {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card-media img {
+  height: 100%;
+  padding: clamp(0.75rem, 2.5vw, 1.25rem);
+  object-fit: contain;
+}
+
+.card-media.placeholder {
+  flex-direction: column;
+  gap: var(--space-xs);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.card-media.placeholder i {
+  font-size: 1.8rem;
+  opacity: 0.75;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+}
+
+.card-body h3 { font-size: 1.1rem; color: var(--color-text-main); }
+.card-body p  { font-size: 0.9rem; line-height: 1.5; color: var(--color-text-muted); }
+
+/* ---------- 4. CAMADA HERO COM GRADIENTE (HISTÓRIA) ---------- */
+.history-hero-layer {
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+.history-hero-layer .bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.history-hero-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 2;
+}
+
+.history-hero-layer .layer-content {
+  position: relative;
+  z-index: 3;
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.history-hero-layer .layer-content h2 { color: #ffffff; }
+.history-hero-layer .layer-content p  { color: rgba(255, 255, 255, 0.9); }
+.history-hero-layer .layer-link       { color: #ffffff; background: var(--color-primary); padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); }
+.history-hero-layer .layer-link:hover { background: var(--color-primary-hover); }
+
+/* ---------- 5. CAMADA DE DESTAQUE (GAME CTA) ---------- */
+/* ---------- 4. CAMADA HERO COM GRADIENTE (REUSÁVEL) ---------- */
+.history-hero-layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  overflow: hidden;
+}
+
+.history-hero-layer .bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.history-hero-layer .layer-content {
+  position: relative;
+  z-index: 3;
+  max-width: 540px;
+}
+
+.history-hero-layer .layer-content h2 { color: #ffffff; }
+.history-hero-layer .layer-content p  { color: rgba(255, 255, 255, 0.9); }
+.history-hero-layer .layer-link       { color: #ffffff; background: var(--color-primary); padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); }
+.history-hero-layer .layer-link:hover { background: var(--color-primary-hover); }
+
+/* VARIANTES DE ALINHAMENTO */
+
+/* Alinhado à Direita (História) */
+.history-hero-layer.align-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 2;
+}
+
+.history-hero-layer.align-right .layer-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Alinhado à Esquerda (Memorigami) */
+.history-hero-layer.align-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 2;
+}
+
+.history-hero-layer.align-left .layer-content {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Ajuste Responsivo (Mobile) */
+@media (max-width: 768px) {
+  .history-hero-layer.align-right::after,
+  .history-hero-layer.align-left::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  .history-hero-layer.align-right .layer-content,
+  .history-hero-layer.align-left .layer-content {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -160,9 +160,9 @@
 
 /* ---------- 3. Passos: folha de caderno + canto recortado e dobrado ---------- */
 .step-card {
-  --rule: 1.75rem;        /* distância entre as linhas azuis */
-  --margin-x: 2.5rem;     /* posição da margem vermelha */
-  --fold: 32px;           /* tamanho da dobra */
+  --rule: 1.75rem;        
+  --margin-x: 2.5rem;    
+  --fold: 32px;          
 
   position: relative;
   padding-left: calc(var(--margin-x) + var(--space-md));
@@ -197,28 +197,27 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Aba da dobra encaixada no espaço recortado do canto superior esquerdo */
 .step-card::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: var(--fold);
   height: var(--fold);
   pointer-events: none;
   z-index: 2;
-  background:
-    linear-gradient(
-      135deg,
-      var(--paper-page-bg) 0%,
-      var(--paper-page-bg) calc(50% - 0.5px),
-      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% - 0.5px),
-      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% + 0.5px),
-      rgba(0, 0, 0, 0.12) calc(50% + 0.5px),
-      rgba(0, 0, 0, 0.02) 80%
-    );
+
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--paper-page-bg) 70%, black) 0%,
+    var(--paper-page-bg) 55%,
+    color-mix(in srgb, var(--paper-page-bg) 85%, black) 100%
+  );
+  
   border: 2px solid var(--color-border-light);
-  transition: width 0.2s ease, height 0.2s ease;
+  filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.25));
+  transition: width 0.25s ease, height 0.25s ease;
 }
 
 .step-card:hover::after {
@@ -242,6 +241,7 @@
   font-size: 1.45rem;
   line-height: var(--rule);
   color: var(--color-primary);
+  border-bottom: 2px dashed var(--color-primary);
 }
 
 /* Losango decorativo no título */

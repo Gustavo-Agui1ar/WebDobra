@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <script type="module" src="assets/scripts/carrosel.js" defer></script>
-
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/category.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <title>Document</title>
+    <script type="module" src="assets/scripts/main.js" defer></script>
+    <title>WebDobra - Início</title>
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="assets/imgs/logo.png" alt="Logo" />
+        <img src="assets/imgs/logo.svg" alt="Logo WebDobra" />
         <h1>WebDobra</h1>
       </div>
-      <nav>
+      <nav id="main-nav">
         <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="index.html" class="active">Início</a></li>
           <li><a href="pages/about.html">Sobre</a></li>
           <li><a href="pages/game.html">Jogo</a></li>
           <li><a href="pages/map.html">Mapa</a></li>
@@ -32,19 +32,137 @@
         </ul>
       </nav>
     </header>
-    <main>
+
+    <main class="container main-content">
+      <!-- Carrossel -->
       <section
-        class="carousel"
+        class="carousel layer"
         id="banner-principal"
-        data-autoplay="false"
-        data-interval="3000"
+        data-autoplay="true"
+        data-interval="5000"
         data-height="400"
         data-show-title="true"
         data-show-description="true"
         data-show-arrows="true"
         data-show-dots="true"
       ></section>
+
+      <!-- Fundamentos -->
+      <section class="layer split-layer bg-white">
+        <div class="layer-content">
+          <h2>Domine os Fundamentos</h2>
+          <p>
+            Antes de criar peças incríveis, é preciso entender a base. Aprenda a
+            ler os diagramas, conheça a diferença entre dobra montanha e vale, e
+            construa uma fundação sólida.
+          </p>
+          <a href="pages/fundamentals.html" class="layer-link">
+            Aprender o básico <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="layer-media">
+          <img src="assets/imgs/logo.svg" alt="Fundamentos do origami" />
+        </div>
+      </section>
+
+      <!-- História Hero (Texto à Direita, Sombra à Direita) -->
+      <section class="layer history-hero-layer align-right">
+        <img
+          src="assets/imgs/history.jpg"
+          alt="História do Origami"
+          class="bg-img"
+        />
+        <div class="layer-content">
+          <h2>Uma Tradição Milenar</h2>
+          <p>
+            Do uso restrito em rituais xintoístas no Japão antigo à
+            democratização com a popularização do papel, o origami evoluiu de um
+            luxo cerimonial para uma arte global.
+          </p>
+          <a href="pages/history.html" class="layer-link">
+            Ler a História Completa <i class="fa-solid fa-book-open"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Seção de Tutoriais / Cards -->
+      <section class="layer block-layer bg-subtle">
+        <header class="layer-header">
+          <h2>Explore o Universo do Origami</h2>
+          <p>
+            Coloque o papel na mesa e dê vida às suas primeiras criações.
+            Escolha um modelo e siga o passo a passo interativo.
+          </p>
+        </header>
+
+        <div class="origamis-grid">
+          <a href="pages/tutorial.html?origami=frog" class="card">
+            <div class="card-media">
+              <img
+                src="assets/data/tutorials/frog/imgs/frog-step-23.png"
+                alt="Sapo de Papel"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Sapo de Papel</h3>
+              <p>
+                Um clássico interativo. Pressione a parte traseira para fazê-lo
+                saltar!
+              </p>
+            </div>
+          </a>
+
+          <a href="pages/tutorial.html?origami=flower" class="card">
+            <div class="card-media placeholder">
+              <i class="fa-solid fa-shapes"></i>
+              <span>Flor de Lótus</span>
+            </div>
+            <div class="card-body">
+              <h3>Flor de Lótus</h3>
+              <p>
+                Uma bela flor de papel ideal para decoração. Ótimo ponto de
+                partida.
+              </p>
+            </div>
+          </a>
+
+          <a href="pages/tutorial.html?origami=boat" class="card">
+            <div class="card-media placeholder">
+              <i class="fa-solid fa-shapes"></i>
+              <span>Barco Tradicional</span>
+            </div>
+            <div class="card-body">
+              <h3>Barco Tradicional</h3>
+              <p>
+                O famoso barquinho. Muito simples de fazer e perfeito para
+                ensinar crianças.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Destaque Jogo (Texto à Esquerda, Sombra à Esquerda) -->
+      <section class="layer history-hero-layer align-left">
+        <img
+          src="assets/imgs/memorigami.jpg"
+          alt="Jogo Memorigami"
+          class="bg-img"
+        />
+        <div class="layer-content">
+          <h2>Desafie sua Mente no Memorigami</h2>
+          <p>
+            Pratique seu foco e aprenda a identificar visualmente os padrões de
+            dobra de forma divertida no nosso jogo da memória exclusivo.
+          </p>
+          <a href="pages/game.html" class="btn-primary">
+            Jogar Agora <i class="fa-solid fa-gamepad"></i>
+          </a>
+        </div>
+      </section>
     </main>
+
     <footer>
       <p>&copy; 2026 WebDobra. All rights reserved.</p>
     </footer>

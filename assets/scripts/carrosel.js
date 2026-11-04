@@ -47,7 +47,11 @@ export default class Carousel {
         if (!item) return "";
         switch (item.type) {
             case "image":
-                return `<img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title || '')}" loading="lazy">`;
+                const imgHTML = `<img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title || '')}" loading="lazy" class="carousel-img">`;
+                if (item.url || item.link) {
+                    return `<a href="${escapeHTML(item.url || item.link)}" style="display: block; width: 100%; height: 100%; text-decoration: none;">${imgHTML}</a>`;
+                }
+                return imgHTML;          
             case "html":
                 return item.content || "";
             case "video":
