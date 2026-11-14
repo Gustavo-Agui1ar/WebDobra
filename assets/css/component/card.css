@@ -1,0 +1,134 @@
+.card {
+  --fold: 32px;
+  --paper-page-bg: var(--color-bg-body, var(--color-bg-subtle, #f8f9fa));
+  
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-card);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  
+  clip-path: polygon(var(--fold) 0%, 100% 0%, 100% 100%, 0% 100%, 0% var(--fold));
+  transition: all 0.3s ease; 
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: var(--fold);
+  height: var(--fold);
+  background: var(--color-border-light);
+  border: 2px solid var(--color-border-light);
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  --fold: 40px; 
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  clip-path: polygon(var(--fold) 0%, 100% 0%, 100% 100%, 0% 100%, 0% var(--fold));
+}
+
+.card-link {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center; 
+  flex-grow: 1; 
+  text-decoration: none;
+  color: inherit;
+  outline: none; 
+}
+
+.card-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  outline-offset: 4px; 
+}
+
+.card-link > figure,
+.card-link > h3,
+.card-link > p {
+  flex: 0 0 100%;
+}
+
+.card figure.card-image-wrapper {
+  aspect-ratio: 16 / 9; 
+  max-height: 250px;
+  padding: var(--space-sm);
+  background-color: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-light);
+  margin: 0;
+}
+
+.card figure.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  transition: transform 0.3s ease;
+  color: var(--color-text-muted);
+}
+
+.card:hover figure.card-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.card h3 {
+  font-size: clamp(1.1rem, 4vw, 1.2rem);
+  color: var(--color-text-main);
+  padding: var(--space-md) var(--space-md) var(--space-xs);
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin: 0;
+  padding: 0 var(--space-md) var(--space-md);
+}
+
+.card:has(.badge, .card-meta-item) p {
+  border-bottom: 2px dashed var(--color-border-light); 
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.card-link > .badge,
+.card-link > .card-meta-item {
+  flex: 0 0 auto; 
+  margin-bottom: var(--space-md);
+}
+
+.card .badge {
+  --badge: var(--color-text-muted);
+  margin-left: var(--space-md); 
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--badge);
+  background-color: color-mix(in srgb, var(--badge) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge) 30%, transparent); 
+  border-radius: 999px;
+}
+
+.card .badge.facil { --badge: var(--color-easy); }
+.card .badge.medio { --badge: var(--color-medium); }
+.card .badge.dificil { --badge: var(--color-hard); }
+
+.card .card-meta-item {
+  margin-left: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
