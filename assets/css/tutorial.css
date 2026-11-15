@@ -1,195 +1,133 @@
-/* ==========================================
-   PÁGINA DE TUTORIAL
-   ========================================== */
-.tutorial-container {
-  max-width: 1000px;
-  margin: 2rem auto 4rem;
-  padding: 0 var(--space-md);
-  --paper-page-bg: var(--color-bg-body, var(--color-bg-subtle, #f8f9fa));
-}
-
-/* ---------- Base compartilhada ---------- */
-.tutorial-header,
-.step-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border-solid);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.tutorial-header,
-.tutorial-header-top,
-.tutorial-header-info,
-.step-card,
-.step-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.tutorial-header,
-.tutorial-header-top,
-.step-card {
-  gap: var(--space-lg);
-}
-
-/* Apenas o cabeçalho mantém o conteúdo centralizado verticalmente */
-.tutorial-header-info {
-  justify-content: center;
-}
-
-/* Título principal */
-.tutorial-header h2 {
-  margin: 0 0 var(--space-sm);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--color-primary);
-}
-
-/* Parágrafos */
-.tutorial-description p,
-.step-content p {
-  margin: 0 0 var(--space-sm);
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.tutorial-description p {
-  max-width: 65ch;
-  color: var(--color-text-muted);
-}
-
-.step-content p {
-  color: var(--color-text-main);
-}
-
-.tutorial-meta-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.tutorial-meta-list li {
-  display: flex;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 2px dashed var(--color-border-light);
-}
-
-.tutorial-main-figure img,
-.video-wrapper {
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-/* ---------- 1. Cabeçalho ---------- */
+/* ---------- Variáveis Globais (Escopo do Card) ---------- */
 .tutorial-header {
   position: relative;
-  overflow: hidden;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
   margin-bottom: var(--space-xl);
-  padding: var(--space-xl);
-  border-radius: calc(var(--radius-md) * 1.5);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  background:
-    radial-gradient(
-      circle at top right,
-      color-mix(in srgb, var(--color-primary) 10%, transparent),
-      transparent 55%
-    ),
+  background: 
+    radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 55%),
     var(--color-bg-card);
+  overflow: hidden;
 }
 
+/* Detalhe superior colorido */
 .tutorial-header::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    var(--color-primary),
-    color-mix(in srgb, var(--color-primary) 40%, white)
-  );
+  background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 40%, white));
 }
 
-.tutorial-header-top {
-  align-items: center;
-  width: 100%;
-}
-
-.tutorial-main-figure {
+/* ---------- Conteúdo Introdutório ---------- */
+.tutorial-intro {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 340px;
-  margin: 0;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
-.tutorial-main-figure img {
+.tutorial-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+#tutorial-title {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  line-height: 1.15;
+  color: var(--color-primary);
+}
+
+#tutorial-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tutorial-intro figure {
+  margin: 0;
+  padding: var(--space-sm);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tutorial-intro figure img {
+  display: block;
   width: 100%;
-  max-height: 300px;
   height: auto;
   object-fit: contain;
-  padding: 12px;
-  background: var(--color-bg-subtle, #f8f9fa);
+  border-radius: calc(var(--radius-md) - 4px);
 }
 
-/* ---------- 2. Vídeo ---------- */
-.tutorial-video-section {
-  width: 100%;
-  margin-top: var(--space-xs);
+/* ---------- Metadados ---------- */
+.tutorial-meta h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
 }
 
-.video-wrapper {
-  position: relative;
+.tutorial-meta ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tutorial-meta li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 6px;
+  border-bottom: 2px dashed var(--color-border-light);
+  font-size: 0.95rem;
+}
+
+/* ---------- Mídia (Vídeo) ---------- */
+#tutorial-video-container {
   width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
   overflow: hidden;
   background: #000;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
+#tutorial-video-container iframe {
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-/* ---------- 3. Passos: folha de caderno + canto recortado e dobrado ---------- */
+/* ---------- Passos do Tutorial ---------- */
 .step-card {
-  --rule: 1.75rem;        /* distância entre as linhas azuis */
-  --margin-x: 2.5rem;     /* posição da margem vermelha */
-  --fold: 32px;           /* tamanho da dobra */
+  --rule: 1.75rem;
+  --margin-x: 1.5rem;
 
-  position: relative;
-  padding-left: calc(var(--margin-x) + var(--space-md));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
   margin-bottom: var(--space-lg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* Recorta fisicamente o canto superior esquerdo do card */
-  clip-path: polygon(var(--fold) 0%, 100% 0%, 100% 100%, 0% 100%, 0% var(--fold));
-
-  /* margem vermelha + pautas azuis horizontais */
+  padding-left: calc(var(--margin-x) + var(--space-md));
+  padding-right: var(--space-sm);
+  padding-bottom: var(--space-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   background-image:
-    linear-gradient(
-      90deg,
-      transparent var(--margin-x),
-      rgb(239 68 68 / 0.45) var(--margin-x),
-      rgb(239 68 68 / 0.45) calc(var(--margin-x) + 2px),
-      transparent calc(var(--margin-x) + 2px)
-    ),
-    linear-gradient(
-      to bottom,
-      transparent calc(var(--rule) - 1px),
-      color-mix(in srgb, var(--color-primary) 22%, transparent) calc(var(--rule) - 1px)
-    );
-
+    linear-gradient(90deg, transparent var(--margin-x), rgba(239, 68, 68, 0.45) var(--margin-x), rgba(239, 68, 68, 0.45) calc(var(--margin-x) + 2px), transparent calc(var(--margin-x) + 2px)),
+    linear-gradient(to bottom, transparent calc(var(--rule) - 1px), color-mix(in srgb, var(--color-primary) 22%, transparent) calc(var(--rule) - 1px));
   background-size: 100% 100%, 100% var(--rule);
-  background-position: 0 0, 0 var(--space-lg);
-  background-repeat: no-repeat, repeat-y;
+}
+
+.tutorial-steps {
+  background-color: transparent;
+  
 }
 
 .step-card:hover {
@@ -197,110 +135,44 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Aba da dobra encaixada no espaço recortado do canto superior esquerdo */
-.step-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--fold);
-  height: var(--fold);
-  pointer-events: none;
-  z-index: 2;
-  background:
-    linear-gradient(
-      135deg,
-      var(--paper-page-bg) 0%,
-      var(--paper-page-bg) calc(50% - 0.5px),
-      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% - 0.5px),
-      color-mix(in srgb, var(--color-text-muted) 35%, transparent) calc(50% + 0.5px),
-      rgba(0, 0, 0, 0.12) calc(50% + 0.5px),
-      rgba(0, 0, 0, 0.02) 80%
-    );
-  border: 2px solid var(--color-border-light);
-  transition: width 0.2s ease, height 0.2s ease;
+.step-card header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: var(--space-lg);
 }
 
-.step-card:hover::after {
-  --fold: 40px;
-}
-
-/* Conteúdo escrito alinhado ao topo para acompanhar perfeitamente as linhas */
-.step-content {
-  justify-content: flex-start;
-  background: transparent;
-  text-align: left;
-  padding-top: var(--space-lg); 
-}
-
-.step-content h3 {
+.step-card header h3 {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 0.5rem;
-  margin: 0 0 var(--space-lg) 0;
   font-size: 1.45rem;
-  line-height: var(--rule);
   color: var(--color-primary);
+  border-bottom: 2px dashed var(--color-primary);
 }
 
-/* Losango decorativo no título */
-.step-content h3::before {
+.step-card header h3::before {
   content: "";
-  flex-shrink: 0;
   width: 8px;
   height: 8px;
   background: var(--color-primary);
   transform: rotate(45deg);
 }
 
-.step-content p {
+.step-card header p {
   margin: 0 0 var(--rule);
+  font-size: 1.05rem;
   line-height: var(--rule);
+  color: var(--color-text-main);
 }
 
-.step-content p:last-child {
-  margin-bottom: 0;
-}
-
-.step-media {
+.step-card figure {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-/* ---------- Desktop ---------- */
-@media (min-width: 768px) {
-  .tutorial-header-top,
-  .step-card {
-    flex-direction: row;
-  }
-
-  .tutorial-header-top {
-    align-items: flex-start;
-  }
-
-  .step-card {
-    align-items: stretch;
-  }
-
-  .tutorial-header-info,
-  .step-content,
-  .step-media {
-    flex: 1;
-  }
-
-  .tutorial-header-info {
-    padding-right: var(--space-lg);
-  }
-
-  .step-content {
-    padding-right: var(--space-md);
-    justify-content: flex-start;
-  }
-}
-
-/* ---------- 4. Fontes ---------- */
+/* ---------- Fontes e Referências ---------- */
 .tutorial-sources {
   margin-top: var(--space-xl);
   padding-top: var(--space-md);
@@ -310,14 +182,12 @@
 .tutorial-sources h3 {
   margin-bottom: var(--space-xs);
   font-size: 1.1rem;
-  color: var(--color-text-main);
 }
 
 .tutorial-sources ul {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -325,12 +195,10 @@
 .tutorial-sources a {
   padding: 0.35rem 0.85rem;
   font-size: 0.95rem;
-  color: var(--color-primary);
-  text-decoration: none;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-light);
   border-radius: 999px;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .tutorial-sources a:hover {
@@ -338,10 +206,47 @@
   background: var(--color-primary);
 }
 
-/* ---------- Erro ---------- */
-#error-message {
-  padding: var(--space-xl);
-  font-size: 1.2rem;
-  text-align: center;
-  color: var(--color-danger);
+/* ---------- Layour Desktop (>= 768px) ---------- */
+@media (min-width: 768px) {
+  .tutorial-header {
+    padding: var(--space-xl);
+  }
+
+  .tutorial-intro {
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+
+  .tutorial-text {
+    flex: 1;
+  }
+
+  .tutorial-intro figure {
+    flex: 0 0 42%;
+  }
+
+  .tutorial-meta ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tutorial-meta li {
+    flex: 1;
+  }
+
+  .step-card {
+    --margin-x: 2.5rem;
+    flex-direction: row;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .step-card header,
+  .step-card figure {
+    flex: 1;
+  }
+
+  .step-card header {
+    padding-right: var(--space-md);
+  }
 }

@@ -1,6 +1,3 @@
-/* ==========================================
-   1. ESTRUTURA PRINCIPAL E CONTAINER 3D
-   ========================================== */
 .origami-wrapper {
   position: relative;
   display: flex;
@@ -11,9 +8,6 @@
   transform-style: preserve-3d;
 }
 
-/* ==========================================
-   2. DIREÇÕES DE FLEXBOX
-   ========================================== */
 .origami-vertical {
   flex-direction: row;
 }
@@ -22,9 +16,6 @@
   flex-direction: column;
 }
 
-/* ==========================================
-   3. BASE DAS PARTES E LINHAS DE DOBRA
-   ========================================== */
 .origami-part {
   background-color: var(--o-color, var(--color-bg-card));
   box-shadow: var(--o-shadow, var(--shadow-md));
@@ -60,9 +51,6 @@
   transform-origin: top center;
 }
 
-/* ==========================================
-   4. LÓGICA DE ANIMAÇÃO DAS ABAS
-   ========================================== */
 .origami-wrapper.fold-part-1 .part-1,
 .origami-wrapper.fold-part-2 .part-2 {
   z-index: 2;
@@ -74,10 +62,6 @@
 .origami-vertical.fold-part-2 .part-2 { animation-name: fold-right-forward; }
 .origami-horizontal.fold-part-1 .part-1 { animation-name: fold-top-forward; }
 .origami-horizontal.fold-part-2 .part-2 { animation-name: fold-bottom-forward; }
-
-/* ==========================================
-   5. KEYFRAMES DAS ANIMAÇÕES 3D
-   ========================================== */
 
 /* Aba da Esquerda (Gira positivo em Y) */
 @keyframes fold-left-forward {

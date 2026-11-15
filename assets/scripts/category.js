@@ -1,214 +1,161 @@
-let categoriesData = [];
+/*global window, document, fetch, console, URLSearchParams, history */
+import CardFactory from "./component/card.js";
+import Header from "./component/header.js";
 
-const ICONS = {
-  category: "fa-folder-open",
-  origami: "fa-shapes",
-  time: "fa-clock",
-  steps: "fa-list-ol",
-  empty: "fa-box-open",
+const headerComponent = new Header();
+headerComponent.render("header", "category.html");
+
+const cardFactory = new CardFactory();
+let categoriesData = null;
+
+const DOM = {
+    backBtn: document.getElementById("back-to-categories"),
+    categoriesContainer: document.getElementById("categories-container"),
+    categoriesSection: document.getElementById("categories-section"),
+    categoryTitle: document.getElementById("category-title"),
+    origamisContainer: document.getElementById("origamis-container"),
+    origamisSection: document.getElementById("origamis-section")
 };
 
-function createIcon(name) {
-  const icon = document.createElement("i");
-  icon.className = `fa-solid ${name}`;
-  icon.setAttribute("aria-hidden", "true");
-  return icon;
+function wrapInListItem(element) {
+    const li = document.createElement("li");
+    li.appendChild(element);
+    return li;
 }
 
-function createMetaItem(iconName, text) {
-  const item = document.createElement("span");
-  item.className = "card-meta-item";
-  item.append(createIcon(iconName), text);
-  return item;
+async function getCategoriesData() {
+    if (categoriesData) {
+        return categoriesData;
+    }
+
+    try {
+        const response = await fetch("../assets/data/categories.json");
+        if (!response.ok) {
+            console.error(`HTTP error! status: ${response.status}`);
+            return [];
+        }
+        categoriesData = await response.json();
+        return categoriesData;
+    } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+        return [];
+    }
 }
 
-function createMediaWrapper(imagePath, iconName, altText) {
-  const mediaWrapper = document.createElement("div");
-  mediaWrapper.className = "card-image-wrapper";
-
-  if (imagePath) {
-    const img = document.createElement("img");
-    img.src = imagePath;
-    img.alt = altText || "";
-    img.loading = "lazy";
-    mediaWrapper.appendChild(img);
-  } else {
-    const placeholder = document.createElement("span");
-    placeholder.className = "card-image-placeholder";
-    placeholder.append(createIcon(iconName), altText);
-    mediaWrapper.appendChild(placeholder);
-  }
-
-  return mediaWrapper;
-}
-
-async function loadCategories() {
-  try {
-    const response = await fetch("../assets/data/categories.json");
-    if (!response.ok) return;
-    categoriesData = await response.json();
-
+async function renderView() {
+    const data = await getCategoriesData();
     const urlParams = new URLSearchParams(window.location.search);
     const catParam = urlParams.get("cat");
 
     if (catParam) {
-      showOrigamisSection(catParam);
-    } else {
-      showCategoriesMain();
+        showOrigamisSection(catParam, data);
+        return;
     }
-  } catch (error) {
-    console.error("Erro ao carregar dados:", error);
-  }
+
+    showCategoriesMain(data);
 }
 
-function showCategoriesMain() {
-  const categoriesContainer = document.getElementById("categories-container");
-  const origamisSection = document.getElementById("origamis-section");
+function showCategoriesMain(data) {
+    if (DOM.origamisSection) {
+        DOM.origamisSection.classList.add("hidden");
+    }
+    if (DOM.categoriesSection) {
+        DOM.categoriesSection.classList.remove("hidden");
+    }
 
-  if (origamisSection) origamisSection.classList.add("hidden");
-  if (categoriesContainer) {
-    categoriesContainer.classList.remove("hidden");
-    categoriesContainer.replaceChildren();
+    if (DOM.categoriesContainer) {
+        if (DOM.categoriesContainer.children.length === 0) {
+            const fragment = document.createDocumentFragment();
 
-    const fragment = document.createDocumentFragment();
+            data.forEach(function (category) {
+                const card = cardFactory.create({
+                    ...category,
+                    url: `?cat=${category.id}`
+                });
+                fragment.appendChild(wrapInListItem(card));
+            });
 
-    categoriesData.forEach((category) => {
-      // Uso da tag <article> para cada card de categoria
-      const card = document.createElement("article");
-      card.className = "card";
-      card.tabIndex = 0;
-      card.setAttribute("role", "link");
-      card.setAttribute("aria-label", `Categoria: ${category.title}`);
-
-      const cardContent = document.createElement("div");
-      cardContent.className = "card-content";
-
-      const title = document.createElement("h2");
-      title.className = "card-title";
-      title.textContent = category.title;
-
-      const subtitle = document.createElement("p");
-      subtitle.className = "card-subtitle";
-      subtitle.textContent = category.description;
-
-      cardContent.append(title, subtitle);
-      card.append(
-        createMediaWrapper(category.image, category.icon || ICONS.category, category.title),
-        cardContent,
-      );
-
-      const openCategory = () => {
-        window.location.search = `?cat=${category.id}`;
-      };
-      card.addEventListener("click", openCategory);
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openCategory();
+            DOM.categoriesContainer.appendChild(fragment);
         }
-      });
-
-      fragment.appendChild(card);
-    });
-
-    categoriesContainer.appendChild(fragment);
-  }
+    }
 }
 
-function showOrigamisSection(categoryId) {
-  const categoriesContainer = document.getElementById("categories-container");
-  const origamisSection = document.getElementById("origamis-section");
-  const origamisContainer = document.getElementById("origamis-container");
-  const categoryTitle = document.getElementById("category-title");
-
-  if (categoriesContainer) categoriesContainer.classList.add("hidden");
-  if (origamisSection) origamisSection.classList.remove("hidden");
-
-  const currentCategory = categoriesData.find(
-    (cat) => cat.id.toLowerCase() === categoryId.toLowerCase(),
-  );
-
-  if (categoryTitle) {
-    categoryTitle.textContent = currentCategory
-      ? `Origamis da Categoria: ${currentCategory.title}`
-      : "Categoria não encontrada";
-  }
-
-  if (origamisContainer) {
-    origamisContainer.replaceChildren();
-
-    if (
-      !currentCategory ||
-      !currentCategory.items ||
-      currentCategory.items.length === 0
-    ) {
-      const emptyMsg = document.createElement("p");
-      emptyMsg.className = "empty-state";
-      emptyMsg.append(
-        createIcon(ICONS.empty),
-        " Nenhum origami cadastrado nesta categoria ainda.",
-      );
-      origamisContainer.appendChild(emptyMsg);
-      return;
+function showOrigamisSection(categoryId, data) {
+    if (DOM.categoriesSection) {
+        DOM.categoriesSection.classList.add("hidden");
+    }
+    if (DOM.origamisSection) {
+        DOM.origamisSection.classList.remove("hidden");
     }
 
-    const fragment = document.createDocumentFragment();
-
-    currentCategory.items.forEach((item) => {
-      // Uso da tag semântica <article> envelopada em um link <a> estruturado
-      const card = document.createElement("a");
-      card.href = item.url || `tutorial.html?origami=${item.id}`;
-      card.className = "card";
-      card.setAttribute("aria-label", `Tutorial de origami: ${item.title}`);
-
-      const cardContent = document.createElement("div");
-      cardContent.className = "card-content";
-
-      const titleEl = document.createElement("h2");
-      titleEl.className = "card-title";
-      titleEl.textContent = item.title;
-
-      const subtitleEl = document.createElement("p");
-      subtitleEl.className = "card-subtitle";
-      subtitleEl.textContent = item.description;
-
-      const cardMeta = document.createElement("div");
-      cardMeta.className = "card-meta";
-
-      const badge = document.createElement("span");
-      const diff = item.difficulty || "";
-      badge.className = `badge ${diff}`;
-      badge.textContent = item.difficultyLabel || diff;
-      cardMeta.appendChild(badge);
-
-      if (item.time) {
-        cardMeta.appendChild(createMetaItem(ICONS.time, item.time));
-      }
-
-      if (item.steps) {
-        cardMeta.appendChild(
-          createMetaItem(ICONS.steps, `${item.steps} passos`),
-        );
-      }
-
-      cardContent.append(titleEl, subtitleEl, cardMeta);
-      card.append(
-        createMediaWrapper(item.image, item.icon || ICONS.origami, item.title),
-        cardContent,
-      );
-
-      fragment.appendChild(card);
+    const currentCategory = data.find(function (cat) {
+        return cat.id.toLowerCase() === categoryId.toLowerCase();
     });
 
-    origamisContainer.appendChild(fragment);
-  }
+    if (DOM.categoryTitle) {
+        if (currentCategory) {
+            DOM.categoryTitle.textContent = currentCategory.title;
+        } else {
+            DOM.categoryTitle.textContent = `"${categoryId}" não encontrada`;
+        }
+    }
+
+    if (DOM.origamisContainer) {
+        DOM.origamisContainer.replaceChildren();
+
+        if (
+            !currentCategory ||
+            !currentCategory.items ||
+            currentCategory.items.length === 0
+        ) {
+            const emptyMsg = document.createElement("li");
+            emptyMsg.className = "empty-state";
+            emptyMsg.append(
+                cardFactory.createIcon(cardFactory.ICONS.empty),
+                " Nenhum origami cadastrado nesta categoria ainda."
+            );
+            DOM.origamisContainer.appendChild(emptyMsg);
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+
+        currentCategory.items.forEach(function (item) {
+            const card = cardFactory.create({
+                ...item,
+                url: item.url || `tutorial.html?origami=${item.id}`
+            });
+            fragment.appendChild(wrapInListItem(card));
+        });
+
+        DOM.origamisContainer.appendChild(fragment);
+    }
 }
 
-const backBtn = document.getElementById("back-to-categories");
-if (backBtn) {
-  backBtn.addEventListener("click", () => {
-    window.location.search = "";
-  });
+if (DOM.categoriesContainer) {
+    DOM.categoriesContainer.addEventListener("click", function (e) {
+        const link = e.target.closest("a");
+        if (!link) {
+            return;
+        }
+
+        const href = link.getAttribute("href");
+        if (href && href.startsWith("?cat=")) {
+            e.preventDefault();
+            history.pushState({}, "", href);
+            renderView();
+        }
+    });
 }
 
-document.addEventListener("DOMContentLoaded", loadCategories);
+if (DOM.backBtn) {
+    DOM.backBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        history.pushState({}, "", window.location.pathname);
+        renderView();
+    });
+}
+
+window.addEventListener("popstate", renderView);
+
+renderView();

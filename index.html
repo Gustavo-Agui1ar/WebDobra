@@ -1,50 +1,120 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <script type="module" src="assets/scripts/carrosel.js" defer></script>
+    <link rel="stylesheet" href="assets/css/component/card.css" />
+    <link rel="stylesheet" href="assets/css/component/carrosel.css" />
+    <link rel="stylesheet" href="assets/css/component/header.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <title>Document</title>
+    <!-- Sem o atributo defer, pois type="module" já é diferido por padrão -->
+    <script type="module" src="assets/scripts/index.js"></script>
+    <title>WebDobra - Início</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="assets/imgs/logo.png" alt="Logo" />
-        <h1>WebDobra</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="pages/about.html">Sobre</a></li>
-          <li><a href="pages/game.html">Jogo</a></li>
-          <li><a href="pages/map.html">Mapa</a></li>
-          <li><a href="pages/category.html">Categorias</a></li>
-          <li><a href="pages/history.html">Histórias</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header><!-- Renderizado dinamicamente por js--></header>
+
     <main>
+      <!-- Seção do Carrossel de Destaques -->
       <section
-        class="carousel"
         id="banner-principal"
-        data-autoplay="false"
-        data-interval="3000"
+        class="carousel"
+        data-autoplay="true"
+        data-interval="5000"
         data-height="400"
         data-show-title="true"
         data-show-description="true"
         data-show-arrows="true"
         data-show-dots="true"
+        tabindex="0"
+        aria-label="Carrossel de Destaques"
       ></section>
+
+      <section class="split">
+        <header>
+          <h2>Domine os Fundamentos</h2>
+          <p>
+            Antes de criar peças incríveis, é preciso entender a base. Aprenda a
+            ler os diagramas, conheça a diferença entre dobra montanha e vale, e
+            construa uma fundação sólida.
+          </p>
+          <a href="pages/fundamentals.html" class="btn text">
+            Aprender o básico
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </header>
+        <figure>
+          <img
+            src="assets/imgs/fundamentals.webp"
+            alt="Fundamentos do origami"
+          />
+        </figure>
+      </section>
+
+      <section class="hero right" aria-labelledby="history-heading">
+        <img
+          src="assets/imgs/history.jpg"
+          alt="Ilustração histórica sobre a arte do origami"
+          class="bg-img"
+        />
+        <header>
+          <h2 id="history-heading">Uma Tradição Milenar</h2>
+          <p>
+            Do uso restrito em rituais xintoístas no Japão antigo à
+            democratização com a popularização do papel, o origami evoluiu de um
+            luxo cerimonial para uma arte global.
+          </p>
+          <a href="pages/history.html" class="btn primary">
+            Ler a História Completa
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          </a>
+        </header>
+      </section>
+
+      <section class="subtle" aria-labelledby="tutorials-heading">
+        <header class="section-header">
+          <h2 id="tutorials-heading">Explore o Universo do Origami</h2>
+          <p>
+            Coloque o papel na mesa e dê vida às suas primeiras criações.
+            Escolha um modelo e siga o passo a passo interativo.
+          </p>
+        </header>
+
+        <ul
+          id="grid-tutorials"
+          class="grid"
+          aria-label="Lista de tutoriais de origami"
+        >
+          <!-- Gerado dinamicamente via JS -->
+        </ul>
+      </section>
+
+      <section class="hero left">
+        <img
+          src="assets/imgs/memorigami.jpg"
+          alt="Jogo Memorigami"
+          class="bg-img"
+        />
+        <header>
+          <h2>Desafie sua Mente no Memorigami</h2>
+          <p>
+            Pratique seu foco e aprenda a identificar visualmente os padrões de
+            dobra de forma divertida no nosso jogo da memória exclusivo.
+          </p>
+          <a href="pages/game.html" class="btn primary">
+            Jogar Agora <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+          </a>
+        </header>
+      </section>
     </main>
+
     <footer>
       <p>&copy; 2026 WebDobra. All rights reserved.</p>
     </footer>
