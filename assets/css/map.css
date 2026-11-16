@@ -1,14 +1,20 @@
-.map {
+.map-container {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	padding: 20px;
-	background-color: white;
-	margin: 50px;
+	margin: 20px;
+	background-color: var(--color-header-bg);
+	border-radius: 20px;
+	padding: 16px;
+}
+
+.map-description {
+	width: 50%;
+	padding: 10px;
 }
 
 .svg-map {
 	width: 50%;
+	padding: 10px;
 }
 
 .norte {
@@ -31,17 +37,21 @@
 	fill: var(--color-light-blue);
 }
 
-path {
+.df {
 	fill: var(--color-light-blue);
-	stroke: gray;
-	stroke-width: 1px;
 }
 
+path {
+	/* Cursor identificado como link */
+	cursor: pointer;
+	/* Borda das regiões */
+	stroke: gray;
+	stroke-width: 1.5px;
+}
+
+/* Deixa a região mais escura ao posicionar o mouse*/
 path:hover {
-	fill: var(--color-text-main);
-	stroke: var(--color-primary);
-	stroke-width: 2px;
-	transition: fill 1s;
+	filter: brightness(0.7);
 }
 
 .tooltip {
@@ -55,7 +65,6 @@ path:hover {
 	height: 50px;
 	line-height: 30px;
 	margin: 0 auto;
-	color: #21669e;
 	border-radius: 5px;
 	transform: translateX(-50%);
 	display: none;
