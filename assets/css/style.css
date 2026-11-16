@@ -17,6 +17,14 @@
   --color-border-dashed: #e0bfae;
   --color-danger: #d32f2f;
   --color-danger-hover: #b71c1c;
+
+  --color-light-yellow: #faedcb;
+  --color-light-green: #c9e4de;
+  --color-light-blue: #c6def1;
+  --color-light-purple: #dbcdf0;
+  --color-light-pink: #f7d9c4;
+
+
   /* Espaçamento */
   --space-xs: 8px;
   --space-sm: 12px;
