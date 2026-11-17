@@ -6,58 +6,56 @@
 
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/category.css" />
+    <link rel="stylesheet" href="../assets/css/component/card.css" />
+    <link rel="stylesheet" href="../assets/css/component/header.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <script type="module" src="../assets/scripts/category.js" defer></script>
+    <script type="module" src="../assets/scripts/category.js"></script>
 
     <title>Categorias - WebDobra</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="../assets/imgs/logo.svg" alt="Logo WebDobra" />
-        <h1>WebDobra</h1>
-      </div>
+    <header><!-- Renderizado dinamicamente por js--></header>
 
-      <button
-        class="menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        id="mobile-menu-btn"
+    <main>
+      <!-- Seção 1: Categorias -->
+      <section
+        id="categories-section"
+        class="catalog-section"
+        aria-label="Categorias de Origami"
       >
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav id="main-nav">
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="about.html">Sobre</a></li>
-          <li><a href="game.html">Jogo</a></li>
-          <li><a href="map.html">Mapa</a></li>
-          <li><a href="category.html" class="active">Categorias</a></li>
-          <li><a href="history.html">Histórias</a></li>
+        <header>
+          <h2>Categorias de Origami</h2>
+        </header>
+        <ul id="categories-container" class="grid">
+          <!-- Gerado dinamicamente via JS -->
         </ul>
-      </nav>
-    </header>
-
-    <main class="container main-content">
-      <section id="categories-container" class="categories-grid">
-        <!-- Gerado dinamicamente -->
       </section>
 
-      <section id="origamis-section" class="origamis-section hidden">
-        <div class="origami-header">
-          <button id="back-to-categories" class="btn-back">
-            <i class="fa-solid fa-arrow-left"></i> Voltar às Categorias
+      <!-- Seção 2: Origamis -->
+      <section
+        id="origamis-section"
+        class="catalog-section hidden"
+        aria-labelledby="category-title"
+      >
+        <header>
+          <button
+            id="back-to-categories"
+            class="btn"
+            aria-label="Voltar às categorias"
+          >
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            <span class="btn-text">Voltar às Categorias</span>
           </button>
           <h2 id="category-title">Origamis da Categoria</h2>
-        </div>
-        <div id="origamis-container" class="origamis-grid">
-          <!-- Gerado dinamicamente -->
-        </div>
+        </header>
+
+        <ul id="origamis-container" class="grid">
+          <!-- Gerado dinamicamente via JS -->
+        </ul>
       </section>
     </main>
 

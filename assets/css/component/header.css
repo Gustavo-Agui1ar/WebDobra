@@ -1,0 +1,117 @@
+body > header {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-header-bg, #f3e5db);
+  box-shadow: var(--shadow-sm, 0 4px 10px rgba(0, 0, 0, 0.05));
+}
+
+body > header .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs, 8px);
+}
+
+body > header .logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body > header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+body > header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body > header nav a {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: var(--color-text-main, #3e2723);
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+body > header nav a:hover,
+body > header nav a.active {
+  color: var(--color-primary, #c95c27);
+}
+
+/* Botão Hamburguer Mobile */
+.menu-toggle {
+  display: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-text-main, #3e2723);
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.menu-toggle:hover:not(:disabled) {
+  transform: none;
+  background: none;
+  box-shadow: none;
+  color: var(--color-primary, #c95c27);
+}
+
+/* ---------- (768px e abaixo) ---------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle i {
+    transition: transform var(--transition-base, 0.25s ease);
+  }
+
+  .menu-toggle[aria-expanded="true"] i {
+    transform: rotate(90deg);
+  }
+
+  body > header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+    background-color: var(--color-header-bg, #f3e5db);
+    box-shadow: var(--shadow-md, 0 8px 16px rgba(0, 0, 0, 0.1));
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+  }
+
+  body > header nav.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  body > header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  body > header nav a {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+  }
+}

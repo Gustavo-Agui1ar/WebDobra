@@ -1,9 +1,12 @@
-import Carousel from "./carrosel.js";
+import Carousel from "./component/carrosel.js";
+import Header from "./component/header.js";
+
+const headerComponent = new Header();
+headerComponent.render("header", "category.html");
 
 const doc = {
   menuBtn: document.getElementById("mobile-menu-btn"),
   nav: document.getElementById("main-nav"),
-  content: document.getElementById("tutorial-content"),
   stepsContainer: document.getElementById("tutorial-steps-container"),
   title: document.getElementById("tutorial-title"),
   description: document.getElementById("tutorial-description"),
@@ -21,9 +24,6 @@ if (doc.menuBtn && doc.nav) {
   });
 }
 
-// ==========================================
-// 4. RENDERIZAÇÃO
-// ==========================================
 function createCarouselItems(passo) {
   const items = [];
   
@@ -61,14 +61,12 @@ function createCarouselItems(passo) {
 
 function createStepCard(passo, index) {
   const card = document.createElement("article");
-  card.className = "step-card";
+  card.className = "step-card panel folded"; // classes que geram o background/dobre (do layout.css e tutorial.css)
 
   const header = document.createElement("header");
-  header.className = "step-content";
   header.innerHTML = `<h3>Passo ${passo.numero}</h3><p>${passo.descricao}</p>`;
 
   const figure = document.createElement("figure");
-  figure.className = "step-media";
   figure.innerHTML = `
     <section class="carousel step-carousel" id="carousel-step-${index}"
       data-autoplay="false" data-height="350" data-show-title="false" 
@@ -99,9 +97,6 @@ function renderSources(fontes) {
   doc.sourcesList.replaceChildren(fragment);
 }
 
-// ==========================================
-// 5. LAZY LOADING
-// ==========================================
 function initLazyCarousels(carouselsConfig) {
   if (!('IntersectionObserver' in window)) {
     carouselsConfig.forEach(({ id, items }) => {
@@ -130,9 +125,6 @@ function initLazyCarousels(carouselsConfig) {
   });
 }
 
-// ==========================================
-// 6. CARREGAMENTO DO TUTORIAL
-// ==========================================
 async function loadTutorial() {
   const urlParams = new URLSearchParams(window.location.search);
   const query = urlParams.get('origami');
@@ -152,7 +144,6 @@ async function loadTutorial() {
     doc.mainImage.alt = `Imagem final do ${data.nome}`;
     doc.mainImage.style.display = "inline-block";
 
-    // Preencher o card "O que precisa?"
     document.getElementById("meta-folha").textContent = data.folha || "Não informado";
     document.getElementById("meta-tempo").textContent = data.tempo || "Não informado";
 
@@ -170,17 +161,17 @@ async function loadTutorial() {
 
     const videoContainer = document.getElementById("tutorial-video-container");
 
+    // O CSS novo lida com as propriedades de container do Iframe,
+    // então a gente injeta só a tag pura aqui.
     if (videoContainer) {
       if (data.video_completo) {
         videoContainer.innerHTML = `
-          <div class="video-wrapper">
-            <iframe 
-              src="${data.video_completo}" 
-              title="Vídeo Tutorial Completo - ${data.nome}" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
-          </div>
+          <iframe 
+            src="${data.video_completo}" 
+            title="Vídeo Tutorial Completo - ${data.nome}" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
         `;
         videoContainer.style.display = "block";
       } else {
