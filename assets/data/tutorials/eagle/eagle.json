@@ -1,0 +1,16 @@
+{
+  "nome": "Aguia",
+  "tempo": "5 minutos",
+  "folha": "15x15 cm (Kami)",
+  "dificuldade": "facil",
+  "descricao": "Aguia super top",
+  "imagem": "tutorials/eagle/imgs/eagle-step-1.png",
+  "video_completo": "https://www.youtube.com/watch?v=F1N4HO1iWxg&time_continue=0&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Forigami.me%2F",
+  "passos": [
+    {
+      "numero": 1,
+      "descricao": "Comece com um pedaço de papel quadrado. Dobre ao meio em noventa graus.",
+      "imagem": "tutorials/eagle/imgs/eagle-step-1.png"
+    }
+]
+}
