@@ -1,0 +1,190 @@
+{
+  "nome": "Caranguejo",
+  "tempo": "15 minutos",
+  "folha": "6 x 6 (Kami)",
+  "dificuldade": "facil",
+  "descricao": "<p>O caranguejo de origami simboliza principalmente proteção, adaptação, renovação e perseverança. Na tradição japonesa e na simbologia geral das dobraduras, ele representa a capacidade de enfrentar desafios com paciência e de se proteger em ambientes em constante mudança.<p>",
+  "imagem": "tutorials/crab/imgs/crab-step-1.png",
+  "video_completo": "https://www.youtube.com/watch?v=UthHHfq73As",
+  "passos": [
+     {
+      "numero": 1,
+      "descricao": "Comece com o lado colorido do papel voltado para cima. Dobre e desdobre ambas as diagonais.",
+      "imagem": "tutorials/crab/imgs/crab-step-1.png"
+    },
+    {
+      "numero": 2,
+      "descricao": "Vire o papel. Em seguida, dobre-o ao meio — tanto na horizontal quanto na vertical — e desdobre-o.",
+      "imagem": "tutorials/crab/imgs/crab-step-2.png"
+    },
+        {
+      "numero": 3,
+      "descricao": "Gire o papel em 45° no sentido horário. Em seguida, dobre o papel conforme mostrado no diagrama, utilizando os vincos já existentes, para formar uma base quadrada.",
+      "imagem": "tutorials/crab/imgs/crab-step-3.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-3-2_mov_hd.mp4"
+    },
+        {
+      "numero": 4,
+      "descricao": "Dobre e desdobre a aba direita ao longo da linha pontilhada.",
+      "imagem": "tutorials/crab/imgs/crab-step-4.png"
+    },
+    {
+      "numero": 5,
+      "descricao": "Leve a aba direita até a linha central, abra-a e faça uma dobra de achatamento.",
+      "imagem": "tutorials/crab/imgs/crab-step-5.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-5-1_mov_hd.mp4"
+    },
+    {
+      "numero": 6,
+      "descricao": "Repita os passos 4 a 5 no outro lado do modelo.",
+      "imagem": "tutorials/crab/imgs/crab-step-6.png"
+    },
+    {
+      "numero": 7,
+      "descricao": "Vire a aba superior direita para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-7.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-7-1_mov_hd.mp4"
+    },
+    {
+      "numero": 8,
+      "descricao": "Dobre e desdobre a aba direita ao longo das linhas pontilhadas.",
+      "imagem": "tutorials/crab/imgs/crab-step-8.png"
+    },
+    {
+      "numero": 9,
+      "descricao": "Leve a aba direita até a linha central, abra-a e faça uma dobra de achatamento.",
+      "imagem": "tutorials/crab/imgs/crab-step-9.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-9-1_mov_hd.mp4"
+    },
+    {
+      "numero": 10,
+      "descricao": "Repita os passos 8 a 9 no outro lado do modelo.",
+      "imagem": "tutorials/crab/imgs/crab-step-10.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-10-2_mov_hd.mp4"
+    },
+    {
+      "numero": 11,
+      "descricao": "Em cada lado, dobre e desdobre as abas superiores em direção à linha central.",
+      "imagem": "tutorials/crab/imgs/crab-step-11.png"
+    },
+    {
+      "numero": 12,
+      "descricao": "Faça uma dobra em pétala na camada superior, utilizando os vincos criados no passo 11.",
+      "imagem": "tutorials/crab/imgs/crab-step-12.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-12_mov_hd.mp4"
+    },
+    {
+      "numero": 13,
+      "descricao": "Vire o modelo e repita os passos 11 a 12.",
+      "imagem": "tutorials/crab/imgs/crab-step-13.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-13_mov_hd.mp4"
+    },
+    {
+      "numero": 14,
+      "descricao": "Vire as duas abas superiores direitas para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-14.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-14_mov_hd.mp4"
+    },
+    {
+      "numero": 15,
+      "descricao": "Repita os passos 11 a 12 na parte da frente e na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-15.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-15-1_mov_hd.mp4"
+    },
+    {
+      "numero": 16,
+      "descricao": "Vire a aba superior direita para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-16.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-16_mov_hd.mp4"
+    },
+    {
+      "numero": 17,
+      "descricao": "Corte a aba superior da parte inferior ao longo da linha pontilhada. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-17.png"
+    },
+    {
+      "numero": 18,
+      "descricao": "Vire as duas abas do canto superior direito para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-18.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-18-1_mov_hd.mp4"
+    },
+    {
+      "numero": 19,
+      "descricao": "Corte a aba superior da parte inferior ao longo da linha pontilhada. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-19.png"
+    },
+    {
+      "numero": 20,
+      "descricao": "Em cada lado, dobre as abas superiores em direção à linha central.",
+      "imagem": "tutorials/crab/imgs/crab-step-20.png"
+    },
+    {
+      "numero": 21,
+      "descricao": "Repita o passo 20 no outro lado do modelo.",
+      "imagem": "tutorials/crab/imgs/crab-step-21.png"
+    },
+    {
+      "numero": 22,
+      "descricao": "Vire as duas abas do canto superior direito para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-22.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-22-1_mov_hd.mp4"
+    },
+    {
+      "numero": 23,
+      "descricao": "Repita o passo 20 na parte da frente e na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-23.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-23_mov_hd.mp4"
+    },
+    {
+      "numero": 24,
+      "descricao": "Vire a aba superior direita para a esquerda. Em seguida, repita o procedimento na parte de trás.",
+      "imagem": "tutorials/crab/imgs/crab-step-24.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-24_mov_hd.mp4"
+    },
+    {
+      "numero": 25,
+      "descricao": "Corte através de todas as camadas ao longo das linhas.",
+      "imagem": "tutorials/crab/imgs/crab-step-25.png"
+    },
+    {
+      "numero": 26,
+      "descricao": "Dobre o canto superior para baixo, seguindo a linha pontilhada, e encaixe-o sob a aba superior.",
+      "imagem": "tutorials/crab/imgs/crab-step-26.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-26_mov_hd.mp4"
+    },
+    {
+      "numero": 27,
+      "descricao": "Dobre o primeiro par de pernas (as camadas superiores) ao longo das linhas pontilhadas.",
+      "imagem": "tutorials/crab/imgs/crab-step-27.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-27-1_mov_hd.mp4"
+    },
+    {
+      "numero": 28,
+      "descricao": "Dobre o segundo conjunto de pernas (as camadas seguintes) por baixo do primeiro par. Dobre-as em um ângulo diferente do primeiro par, de modo que apareçam por cima dele.",
+      "imagem": "tutorials/crab/imgs/crab-step-28.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-28_mov_hd.mp4"
+    },
+    {
+      "numero": 29,
+      "descricao": "Repita as mesmas dobras com o terceiro par de pernas. Novamente, elas devem ficar acima do segundo par.",
+      "imagem": "tutorials/crab/imgs/crab-step-29.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-29_mov_hd.mp4"
+    },
+    {
+      "numero": 30,
+      "descricao": "Faça o mesmo com o quarto par de pernas.",
+      "imagem": "tutorials/crab/imgs/crab-step-30.png",
+      "video": "tutorials/crab/videos/origami-crab-paper-fold-step-30-5_mov_hd.mp4"
+    },
+    {
+      "numero": 31,
+      "descricao": "Dobre o par de pernas superior (as pinças do caranguejo) ao longo das linhas pontilhadas, de modo que fiquem voltadas para o centro.",
+      "imagem": "tutorials/crab/imgs/crab-step-31.png"
+    },
+    {
+      "numero": 32,
+      "descricao": "Dobre as pernas restantes ao longo das linhas pontilhadas, de modo que fiquem voltadas para o lado oposto. Em seguida, vire o modelo.",
+      "imagem": "tutorials/crab/imgs/crab-step-32.png"
+    }
+]
+}
