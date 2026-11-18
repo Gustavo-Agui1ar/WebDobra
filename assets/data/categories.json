@@ -25,7 +25,7 @@
         "steps": 32,
         "description": "Um modelo interessante e desafiador. Vire o caranguejo para ver seu movimento!",
         "image": "../assets/data/tutorials/crab/imgs/crab-step-32.png",
-        "url": "https://www.youtube.com/watch?v=UthHHfq73As"
+        "url": "tutorial.html?origami=crab"
       },
       {
         "id": "horse",
@@ -36,7 +36,7 @@
         "steps": 20,
         "description": "Uma figura básica mas icônica. Começe a dobrar!",
         "image": "../assets/data/tutorials/horse/imgs/horse-step-20.png",
-        "url": "https://www.youtube.com/watch?v=9YUhvncrUjk"
+        "url": "tutorial.html?origami=horse"
       },
       {
         "id": "camel",
@@ -47,7 +47,7 @@
         "steps": 20,
         "description": "Um modelo simples mas memorável. Começe a dobrar!",
         "image": "../assets/data/tutorials/camel/imgs/camel-step-20.png",
-        "url": "https://www.youtube.com/watch?v=g5586TJhRw8"
+        "url": "tutorial.html?origami=camel"
       },
       {
         "id": "owl",
@@ -58,7 +58,7 @@
         "steps": 18,
         "description": "Um modelo discreto mas elegante. Começe a dobrar!",
         "image": "../assets/data/tutorials/owl/imgs/owl-step-18.png",
-        "url": "https://www.youtube.com/watch?v=RFd_HHFooxk&t=2s"
+        "url": "tutorial.html?origami=owl"
       },
       {
         "id": "chameleon",
@@ -69,7 +69,7 @@
         "steps": 31,
         "description": "Uma dobra mais desafiadora. Começe a dobrar e veja o camaleão ganhar vida!",
         "image": "../assets/data/tutorials/chameleon/imgs/chameleon-step-18.png",
-        "url": "https://www.youtube.com/watch?v=3MpIZHV0-fU"
+        "url": "tutorial.html?origami=chameleon"
       }
     ]
   },
