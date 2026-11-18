@@ -1,0 +1,48 @@
+.history {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color:#8b4513
+}
+.capitulate{
+    float: left;
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 0.8;
+    padding-right: 8px;
+    padding-top: 5px;
+    color: #8b4513;
+}
+.history-container 
+{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.types-container {
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    text-align: center;
+}
+.type {
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.type img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    border: 2px solid #5c5a5a;
+    max-height: 250px;
+}
+
+p{margin-bottom: 20px}

@@ -1,0 +1,123 @@
+{
+  "nome": "Cavalo",
+  "tempo": "5 minutos",
+  "folha": "6 x 6 (Kami)",
+  "dificuldade": "facil",
+  "descricao": "<p>O cavalo de origami simboliza força, liberdade, nobreza e velocidade. Na arte japonesa de dobrar papel, essa figura une o simbolismo tradicional do animal ao propósito meditativo de transformar uma folha simples na essência de um espírito livre e determinado.<p>",
+  "imagem": "tutorials/horse/imgs/horse-step-1.png",
+  "video_completo": "https://www.youtube.com/watch?v=9YUhvncrUjk",
+  "passos": [
+     {
+      "numero": 1,
+      "descricao": "Comece com o lado colorido voltado para cima, em uma posição de losango. Dobre e desdobre ao longo de ambas as diagonais.",
+      "imagem": "tutorials/horse/imgs/horse-step-1.png"
+    },
+    {
+      "numero": 2,
+      "descricao": "Vire o papel.",
+      "imagem": "tutorials/horse/imgs/horse-step-2.png"
+    },
+        {
+      "numero": 3,
+      "descricao": "Dobre e desdobre ao meio em ambos os lados.",
+      "imagem": "tutorials/horse/imgs/horse-step-3.png"
+    },
+        {
+      "numero": 4,
+      "descricao": "Dobre ao longo dos vincos existentes para formar uma base quadrada.",
+      "imagem": "tutorials/horse/imgs/horse-step-4.png",
+      "video": "tutorials/horse/videos/horse-step-4.mp4"
+    },
+    {
+      "numero": 5,
+      "descricao": "Dobre as bordas inferior esquerda e direita (apenas a camada superior) em direção à linha central vertical.",
+      "imagem": "tutorials/horse/imgs/horse-step-5.png"
+    },
+    {
+      "numero": 6,
+      "descricao": "Dobre a ponta superior para baixo, usando a borda superior das abas do passo 5 como referência. Em seguida, desdobre.",
+      "imagem": "tutorials/horse/imgs/horse-step-6.png",
+      "video": "tutorials/horse/videos/horse-step-6.mp4"
+    },
+    {
+      "numero": 7,
+      "descricao": "Desdobre as abas do passo 5.",
+      "imagem": "tutorials/horse/imgs/horse-step-7.png"
+    },
+    {
+      "numero": 8,
+      "descricao": "Corte ao longo da linha central vertical (apenas na camada superior), partindo do canto inferior até o vinco feito no passo 6. Em seguida, repita os passos 5, 7 e 8 no outro lado.",
+      "imagem": "tutorials/horse/imgs/horse-step-8.png",
+      "video": "tutorials/horse/videos/horse-step-8.mp4"
+    },
+    {
+      "numero": 9,
+      "descricao": "Dobre para cima os cantos inferiores das camadas superiores (esquerda e direita).",
+      "imagem": "tutorials/horse/imgs/horse-step-9.png",
+      "video": "tutorials/horse/videos/horse-step-9.mp4"
+    },
+    {
+      "numero": 10,
+      "descricao": "Vire o modelo.",
+      "imagem": "tutorials/horse/imgs/horse-step-10.png"
+    },
+    {
+      "numero": 11,
+      "descricao": "Repita o passo 9 neste lado.",
+      "imagem": "tutorials/horse/imgs/horse-step-11.png",
+      "video": "tutorials/horse/videos/horse-step-11.mp4"
+    },
+    {
+      "numero": 12,
+      "descricao": "Dobre levemente os cantos superiores para dentro, de modo a formar os cascos do cavalo. Não há pontos de referência exatos; apenas busque a simetria. Repita o procedimento do outro lado.",
+      "imagem": "tutorials/horse/imgs/horse-step-12.png",
+      "video": "tutorials/horse/videos/horse-step-12.mp4"
+    },
+    {
+      "numero": 13,
+      "descricao": "Dobre os cantos esquerdo e direito em direção à linha central, utilizando os vincos já existentes.",
+      "imagem": "tutorials/horse/imgs/horse-step-13.png",
+      "video": "tutorials/horse/videos/horse-step-13.mp4"
+    },
+    {
+      "numero": 14,
+      "descricao": "Vire o modelo.",
+      "imagem": "tutorials/horse/imgs/horse-step-14.png"
+    },
+    {
+      "numero": 15,
+      "descricao": "Repita o passo 13 neste lado.",
+      "imagem": "tutorials/horse/imgs/horse-step-15.png",
+      "video": "tutorials/horse/videos/horse-step-15.mp4"
+    },
+    {
+      "numero": 16,
+      "descricao": "Dobre o canto inferior direito para fora, de modo a formar a cauda do cavalo. A linha central vertical deve, agora, ficar alinhada com o vinco horizontal mais próximo. Marque bem o vinco e, em seguida, desdobre.",
+      "imagem": "tutorials/horse/imgs/horse-step-16.png",
+      "video": "tutorials/horse/videos/horse-step-16.mp4"
+    },
+    {
+      "numero": 17,
+      "descricao": "Faça uma dobra invertida para dentro, seguindo os vincos que você acabou de criar.",
+      "imagem": "tutorials/horse/imgs/horse-step-17.png",
+      "video": "tutorials/horse/videos/horse-step-17.mp4"
+    },
+    {
+      "numero": 18,
+      "descricao": "Dobre o canto inferior esquerdo para fora, de modo a formar a cabeça do cavalo. Não existem pontos de referência exatos aqui; sinta-se à vontade para dar o formato que desejar. Marque bem o vinco e, em seguida, desdobre.",
+      "imagem": "tutorials/horse/imgs/horse-step-18.png",
+      "video": "tutorials/horse/videos/horse-step-18.mp4"
+    },
+    {
+      "numero": 19,
+      "descricao": "Faça uma dobra invertida para dentro, seguindo os vincos que você acabou de criar.",
+      "imagem": "tutorials/horse/imgs/horse-step-19.png",
+      "video": "tutorials/horse/videos/horse-step-19.mp4"
+    },
+    {
+      "numero": 20,
+      "descricao": "Gire o modelo em 180°.",
+      "imagem": "tutorials/horse/imgs/horse-step-20.png"
+    }
+]
+}

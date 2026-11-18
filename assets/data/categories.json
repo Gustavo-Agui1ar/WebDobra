@@ -15,6 +15,61 @@
         "description": "Um clássico origami interativo. Pressione a parte traseira para fazê-lo saltar!",
         "image": "../assets/data/tutorials/frog/imgs/frog-step-23.png",
         "url": "tutorial.html?origami=frog"
+      },
+      {
+        "id": "crab",
+        "title": "Caranguejo de Papel",
+        "difficulty": "facil",
+        "difficultyLabel": "Fácil",
+        "time": "15-20 min",
+        "steps": 32,
+        "description": "Um modelo interessante e desafiador. Vire o caranguejo para ver seu movimento!",
+        "image": "../assets/data/tutorials/crab/imgs/crab-step-32.jpg",
+        "url": "tutorial.html?origami=crab"
+      },
+      {
+        "id": "horse",
+        "title": "Cavalo de Papel",
+        "difficulty": "facil",
+        "difficultyLabel": "Fácil",
+        "time": "5 min",
+        "steps": 20,
+        "description": "Uma figura básica mas icônica. Começe a dobrar!",
+        "image": "../assets/data/tutorials/horse/imgs/horse-step-20.png",
+        "url": "tutorial.html?origami=horse"
+      },
+      {
+        "id": "camel",
+        "title": "Camelo de Papel",
+        "difficulty": "facil",
+        "difficultyLabel": "Fácil",
+        "time": "5 min",
+        "steps": 20,
+        "description": "Um modelo simples mas memorável. Começe a dobrar!",
+        "image": "../assets/data/tutorials/camel/imgs/camel-step-20.png",
+        "url": "tutorial.html?origami=camel"
+      },
+      {
+        "id": "owl",
+        "title": "Coruja de Papel",
+        "difficulty": "facil",
+        "difficultyLabel": "Fácil",
+        "time": "15-20 min",
+        "steps": 18,
+        "description": "Um modelo discreto mas elegante. Começe a dobrar!",
+        "image": "../assets/data/tutorials/owl/imgs/owl-step-18.jpg",
+        "url": "tutorial.html?origami=owl"
+      },
+      {
+        "id": "chameleon",
+        "title": "Camaleão de Papel",
+        "difficulty": "medio",
+        "difficultyLabel": "Médio",
+        "time": "10-15 min",
+        "steps": 31,
+        "description": "Uma dobra mais desafiadora. Começe a dobrar e veja o camaleão ganhar vida!",
+        "image": "../assets/data/tutorials/chameleon/imgs/chameleon-step-18.png",
+        "url": "tutorial.html?origami=chameleon"
       }
     ]
   },

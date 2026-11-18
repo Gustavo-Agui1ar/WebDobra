@@ -1,0 +1,112 @@
+{
+  "nome": "Coruja",
+  "tempo": "15 minutos",
+  "folha": "6 x 6 (Kami)",
+  "dificuldade": "facil",
+  "descricao": "<p>O origami de coruja simboliza sabedoria, boa sorte, proteção e um caminho livre de sofrimentos. Ele une o simbolismo universal da ave à tradição japonesa de jogos de palavras e bons desejos associados à arte de dobrar papel.<p>",
+  "imagem": "tutorials/owl/imgs/owl-step-18.jpg",
+  "video_completo": "https://www.youtube.com/watch?v=RFd_HHFooxk&t=2s",
+  "passos": [
+     {
+      "numero": 1,
+      "descricao": "Comece com o lado branco do papel voltado para cima. Dobre ao meio na vertical e, depois, desdobre.",
+      "imagem": "tutorials/owl/imgs/owl-step-1.jpg"
+    },
+    {
+      "numero": 2,
+      "descricao": "Dobre e desdobre ao meio, na horizontal. Em seguida, vire o papel.",
+      "imagem": "tutorials/owl/imgs/owl-step-2.jpg"
+    },
+        {
+      "numero": 3,
+      "descricao": "Dobre e desdobre ao longo das diagonais.",
+      "imagem": "tutorials/owl/imgs/owl-step-3.jpg"
+    },
+        {
+      "numero": 4,
+      "descricao": "Gire o papel 45 graus no sentido horário e vire-o.",
+      "imagem": "tutorials/owl/imgs/owl-step-4.jpg"
+    },
+    {
+      "numero": 5,
+      "descricao": "Dobre ao longo dos vincos existentes para formar uma Base Quadrada.",
+      "imagem": "tutorials/owl/imgs/owl-step-5.jpg"
+    },
+    {
+      "numero": 6,
+      "descricao": "Dobre e desdobre ao longo das linhas pontilhadas.",
+      "imagem": "tutorials/owl/imgs/owl-step-6.jpg",
+      "video": "tutorials/owl/videos/owl-step-6.mp4"
+    },
+    {
+      "numero": 7,
+      "descricao": "Faça uma dobra em pétala trazendo a ponta inferior para cima e dobrando ao longo dos vincos feitos no passo 6.",
+      "imagem": "tutorials/owl/imgs/owl-step-7.jpg",
+      "imagem2": "tutorials/owl/imgs/owl-step-7.5.jpg"
+    },
+    {
+      "numero": 8,
+      "descricao": "Vire o modelo e repita os passos 6 a 7 no outro lado.",
+      "imagem": "tutorials/owl/imgs/owl-step-8.jpg",
+      "video": "tutorials/owl/videos/owl-step-8.mp4"
+    },
+    {
+      "numero": 9,
+      "descricao": "Dobre a aba superior para baixo. Em seguida, repita o procedimento do outro lado.",
+      "imagem": "tutorials/owl/imgs/owl-step-9.jpg",
+      "video": "tutorials/owl/videos/owl-step-9.mp4"
+    },
+    {
+      "numero": 10,
+      "descricao": "Dobre as bordas superiores em direção à linha central. Em seguida, repita o procedimento do outro lado.",
+      "imagem": "tutorials/owl/imgs/owl-step-10.jpg"
+    },
+    {
+      "numero": 11,
+      "descricao": "Puxe suavemente a aba central direita para fora.",
+      "imagem": "tutorials/owl/imgs/owl-step-11.jpg",
+      "descricao2": "Levante-o e gire-o em sua direção, de modo que fique na horizontal. Ajuste o ângulo conforme necessário e pressione para deixá-lo plano.",
+      "imagem2": "tutorials/owl/imgs/owl-step-11.5.jpg",
+      "video": "tutorials/owl/videos/owl-step-11.mp4"
+    },
+    {
+      "numero": 12,
+      "descricao": "Repita o passo 11 no lado esquerdo.",
+      "imagem": "tutorials/owl/imgs/owl-step-12.jpg"
+    },
+    {
+      "numero": 13,
+      "descricao": "É hora de dobrar a cabeça da coruja! Faça uma prega dobrando a ponta uma vez com uma dobra em vale e, em seguida, mais uma vez com uma dobra em montanha.",
+      "imagem": "tutorials/owl/imgs/owl-step-13.jpg",
+      "video": "tutorials/owl/videos/origami-owl-paper-fold-step-13_mp4_hd.mp4"
+    },
+    {
+      "numero": 14,
+      "descricao": "Dobre a ponta para baixo ao longo da linha pontilhada.",
+      "imagem": "tutorials/owl/imgs/owl-step-14.jpg",
+      "video": "tutorials/owl/videos/owl-step-14.mp4"
+    },
+    {
+      "numero": 15,
+      "descricao": "Faça um pequeno corte ao longo da linha central, apenas na camada superior.",
+      "imagem": "tutorials/owl/imgs/owl-step-15.jpg"
+    },
+    {
+      "numero": 16,
+      "descricao": "Dobre as abas para cima para formar as garras.",
+      "imagem": "tutorials/owl/imgs/owl-step-16.jpg",
+      "video": "tutorials/owl/videos/owl-step-16.mp4"
+    },
+    {
+      "numero": 17,
+      "descricao": "Vire o modelo.",
+      "imagem": "tutorials/owl/imgs/owl-step-17.jpg"
+    },
+    {
+      "numero": 18,
+      "descricao": "Em cada lado, faça um corte ao longo das linhas pontilhadas, apenas na camada superior. Levante as abas para formar os tufos das orelhas. Em seguida, vire o modelo",
+      "imagem": "tutorials/owl/imgs/owl-step-18.jpg",
+      "video": "tutorials/owl/videos/owl-step-18.mp4"
+    }
+]
+}
