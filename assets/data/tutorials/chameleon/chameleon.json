@@ -2,7 +2,7 @@
   "nome": "Camaleão",
   "tempo": "15 minutos",
   "folha": "6 x 6 (Kami)",
-  "dificuldade": "intermediário",
+  "dificuldade": "medio",
   "descricao": "<p>O camaleão de origami simboliza adaptação, transformação e resiliência. Na arte de dobrar papel, essa figura une a delicadeza técnica do origami à capacidade natural do réptil de se ajustar a diferentes ambientes e situações.<p>",
   "imagem": "tutorials/chameleon/imgs/chameleon-step-1.png",
   "video_completo": "https://www.youtube.com/watch?v=3MpIZHV0-fU",
@@ -10,186 +10,186 @@
      {
       "numero": 1,
       "descricao": "Comece com o lado colorido do papel voltado para cima, em uma posição de losango. Dobre e desdobre ambas as diagonais.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-1-1024x1024.png"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-1.png"
     },
     {
       "numero": 2,
       "descricao": "Leve os cantos esquerdo e direito até o ponto central. Pressione levemente para marcar pontos de referência em cada lado e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-2-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-2_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-2.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-2.mp4"
     },
         {
       "numero": 3,
       "descricao": "Dobre o canto esquerdo até a marca que você acabou de fazer e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-3-1024x1024.png"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-3.png"
     },
         {
       "numero": 4,
       "descricao": "Repita o passo 3 no lado direito.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-4-1024x1024.png"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-4.png"
     },
     {
       "numero": 5,
       "descricao": "Em cada lado, dobre a borda inferior de modo que ela encontre o vinco feito nos passos 3 e 4. O vinco deve começar no ponto em que o vinco existente e a borda se cruzam. Em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-5-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-5_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-5.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-5.mp4"
     },
     {
       "numero": 6,
       "descricao": "Em cada lado, faça uma dobra em montanha sobre o vinco criado no passo 5 e dobre de modo que ele se encontre com a linha central.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-6-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-6_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-6.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-6.mp4"
     },
     {
       "numero": 7,
       "descricao": "Dobre o canto direito da aba superior esquerda para baixo, ao longo da linha pontilhada. Esse vinco deve ir do canto superior esquerdo ao canto inferior direito da área em formato de losango. Em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-7-1024x1024.png",
-      "imagem2": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-7.5-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-7_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-7.png",
+      "imagem2": "tutorials/chameleon/imgs/chameleon-step-7.5.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-7.mp4"
     },
     {
       "numero": 8,
       "descricao": "Faça uma dobra giratória, utilizando os vincos existentes como guia. O ponto de referência deve se deslocar para baixo.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-8-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-8_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-8.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-8.mp4"
     },
     {
       "numero": 9,
       "descricao": "Repita os passos 7 e 8 no lado direito.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-9-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-9_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-9.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-9.mp4"
     },
     {
       "numero": 10,
       "descricao": "Dobre o modelo ao meio, da direita para a esquerda, em formato de montanha.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-10-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-10_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-10.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-10.mp4"
     },
     {
       "numero": 11,
       "descricao": "Gire o modelo em 90° no sentido anti-horário.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-11-1024x1024.png"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-11.png"
     },
     {
       "numero": 12,
       "descricao": "Dobre a borda inferior esquerda até a linha de vinco mais próxima. Vinque bem e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-12-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-12_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-12.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-12.mp4"
     },
     {
       "numero": 13,
       "descricao": "Faça uma dobra reversa para fora ao longo do vinco da etapa 12.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-13-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-13_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-13.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-13.mp4"
     },
     {
       "numero": 14,
       "descricao": "Com foco na área branca, dobre do canto superior para o canto inferior. Em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-14-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-14_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-14.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-14.mp4"
     },
     {
       "numero": 15,
       "descricao": "Dobre o ponto de referência de modo que ele encontre o vinco feito no passo 14. Comece o vinco a partir do canto esquerdo. Em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-15-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-15_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-15.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-15.mp4"
     },
     {
       "numero": 16,
       "descricao": "Abra as camadas e faça uma dobra em zigue-zague ao longo dos vincos dos passos 14 e 15. A parte superior da cabeça do camaleão deve ficar embutida na parte inferior.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-16-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-16_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-16.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-16.mp4"
     },
     {
       "numero": 17,
       "descricao": "Faça uma dobra em montanha ao longo das linhas pontilhadas em ambos os lados.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-17-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-17_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-17.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-17.mp4"
     },
     {
       "numero": 18,
       "descricao": "Dobre a ponta para baixo para formar o olho do camaleão.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-18-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-18_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-18.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-18.mp4"
     },
     {
       "numero": 19,
       "descricao": "Abra a aba do olho e empurre-a levemente para baixo, a fim de conferir volume e uma sutil mudança de cor. Não a achate completamente.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-19-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-19_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-19.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-19.mp4"
     },
     {
       "numero": 20,
       "descricao": "Repita os passos 18 e 19 no outro lado.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-20-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-20_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-20.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-20.mp4"
     },
     {
       "numero": 21,
       "descricao": "Dobre a aba superior para a esquerda para formar a perna dianteira. Repita do outro lado.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-21-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-21_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-21.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-21.mp4"
     },
     {
       "numero": 22,
       "descricao": "Faça uma dobra em montanha ao longo da linha pontilhada para dar forma à perna dianteira. O vinco deve começar no ponto em que o lado colorido e o lado branco se encontram. Repita o procedimento do outro lado.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-22-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-22_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-22.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-22.mp4"
     },
     {
       "numero": 23,
       "descricao": "Dobre e desdobre ambas as pernas ao longo da linha pontilhada para criar uma dobra de 90°.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-23-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-23_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-23.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-23.mp4"
     },
     {
       "numero": 24,
       "descricao": "Dobre a cauda para a esquerda, criando um ângulo de 90° entre a cauda e o corpo. Marque bem o vinco e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-24-1024x1024.png",
-      "imagem2": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-24.5-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-24_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-24.png",
+      "imagem2": "tutorials/chameleon/imgs/chameleon-step-24.5.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-24.mp4"
     },
     {
       "numero": 25,
       "descricao": "Dobre a cauda para baixo, formando um ângulo de 90° entre a cauda e o corpo principal, deixando um pequeno espaço entre o início do vinco e o vinco feito no passo 24. Marque bem o vinco e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-25-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-25_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-25.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-25.mp4"
     },
     {
       "numero": 26,
       "descricao": "Faça uma dobra invertida interna na cauda, ​​seguindo os vincos do passo 25.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-26-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-26_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-26.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-26.mp4"
     },
     {
       "numero": 27,
       "descricao": "Afine a cauda dobrando a borda direita ao longo da linha pontilhada. O vinco vai da parte superior direita até o canto inferior. Desdobre e, em seguida, repita o processo do outro lado.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-27-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-27_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-27.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-27.mp4"
     },
     {
       "numero": 28,
       "descricao": "Faça uma dobra em montanha ao longo dos vincos criados no passo 27.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-28-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-28_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-28.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-28.mp4"
     },
     {
       "numero": 29,
       "descricao": "Dobre o canto direito em direção à extremidade superior, alinhando-o ao ponto de referência. Faça um vinco ao longo da linha pontilhada e, em seguida, desdobre.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-29-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-29_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-29.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-29.mp4"
     },
     {
       "numero": 30,
       "descricao": "Faça uma dobra vincada ao longo das marcas dos passos 24 e 29.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-30-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-30_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-30.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-30.mp4"
     },
     {
       "numero": 31,
       "descricao": "Enrole a cauda para a esquerda.",
-      "imagem": "tutorials/chameleon/imgs/origami-chameleon-diagram-step-31-1024x1024.png",
-      "video": "tutorials/chameleon/videos/origami-chameleon-paper-fold-step-31-1_mp4_hd.mp4"
+      "imagem": "tutorials/chameleon/imgs/chameleon-step-31.png",
+      "video": "tutorials/chameleon/videos/chameleon-step-31.mp4"
     }
 ]
 }

@@ -24,7 +24,7 @@
         "time": "15-20 min",
         "steps": 32,
         "description": "Um modelo interessante e desafiador. Vire o caranguejo para ver seu movimento!",
-        "image": "../assets/data/tutorials/crab/imgs/crab-step-32.png",
+        "image": "../assets/data/tutorials/crab/imgs/crab-step-32.jpg",
         "url": "tutorial.html?origami=crab"
       },
       {
@@ -57,14 +57,14 @@
         "time": "15-20 min",
         "steps": 18,
         "description": "Um modelo discreto mas elegante. Começe a dobrar!",
-        "image": "../assets/data/tutorials/owl/imgs/owl-step-18.png",
+        "image": "../assets/data/tutorials/owl/imgs/owl-step-18.jpg",
         "url": "tutorial.html?origami=owl"
       },
       {
         "id": "chameleon",
         "title": "Camaleão de Papel",
-        "difficulty": "intermediário",
-        "difficultyLabel": "Intermediário",
+        "difficulty": "medio",
+        "difficultyLabel": "Médio",
         "time": "10-15 min",
         "steps": 31,
         "description": "Uma dobra mais desafiadora. Começe a dobrar e veja o camaleão ganhar vida!",
