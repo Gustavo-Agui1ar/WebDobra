@@ -1,19 +1,127 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/game.css" />
     <link rel="stylesheet" href="../assets/css/component/header.css" />
 
+    <script src="../assets/scripts/main.js" defer></script>
     <script type="module" src="../assets/scripts/game.js"></script>
-
-    <title>Document</title>
+    <title>WebDobra - Jogo da Memória</title>
   </head>
   <body>
-    <header><!-- Renderizado dinamicamente por js--></header>
+    <header><!-- carregado dinamicamente --></header>
+
+    <main>
+      <section id="hero-section" class="hero-section">
+        <h2>DOBRE SUA MEMÓRIA</h2>
+
+        <p>
+          Organize as etapas das dobraduras na ordem correta e descubra até onde
+          sua memória pode chegar. Escolha o seu desafio:
+        </p>
+
+        <nav aria-label="Escolha a dificuldade do jogo">
+          <menu>
+            <li>
+              <button
+                type="button"
+                class="mode-card easy-mode"
+                data-mode="facil"
+                aria-label="Jogar no modo Fácil"
+              >
+                <img src="../assets/imgs/easy-mode.png" />
+                <h3>Fácil</h3>
+              </button>
+            </li>
+            <li>
+              <button
+                class="mode-card medium-mode"
+                data-mode="medio"
+                aria-label="Jogar no modo Médio"
+              >
+                <img src="../assets/imgs/medium-mode.png" />
+                <h3>Médio</h3>
+              </button>
+            </li>
+            <li>
+              <button
+                class="mode-card hard-mode"
+                data-mode="dificil"
+                aria-label="Jogar no modo Difícil"
+              >
+                <img src="../assets/imgs/hard-mode.png" />
+                <h3>Difícil</h3>
+              </button>
+            </li>
+            <li>
+              <button
+                class="mode-card loop-mode"
+                data-mode="loop"
+                aria-label="Jogar no modo Loop Infinito"
+              >
+                <img src="../assets/imgs/loop-mode.png" />
+                <h3>Loop</h3>
+              </button>
+            </li>
+          </menu>
+        </nav>
+      </section>
+
+      <section
+        id="game-section"
+        class="game-section hidden"
+        aria-labelledby="titulo-tabuleiro"
+      >
+        <header class="game-header">
+          <div class="game-header-top">
+            <button id="btn-voltar" class="btn-danger">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              Voltar ao Menu
+            </button>
+            <p id="tentativas-info" aria-live="polite" aria-atomic="true">
+              Tentativas: <output id="tentativas-count">3</output>
+            </p>
+          </div>
+
+          <hgroup class="game-info-header">
+            <h2 id="titulo-tabuleiro"></h2>
+            <div id="origami-descricao" class="origami-descricao"></div>
+            <a id="link-tutorial" class="tutorial-link" href="#">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              Ver tutorial completo deste modelo
+            </a>
+          </hgroup>
+        </header>
+
+        <div
+          id="game-board"
+          class="board-container"
+          role="region"
+          aria-label="Tabuleiro com as etapas do origami"
+        >
+          <p>Os cards do jogo aparecerão aqui...</p>
+        </div>
+
+        <button type="button" id="btn-tentar" disabled>Tentar</button>
+
+        <button type="button" id="btn-reiniciar" class="hidden">
+          <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+          <span>Tentar Novamente</span>
+        </button>
+      </section>
+    </main>
+
     <footer>
-      <p>&copy; 2026 WebDobra. All rights reserved.</p>
+      <p><small>&copy; 2026 WebDobra. Todos os direitos reservados.</small></p>
     </footer>
   </body>
 </html>

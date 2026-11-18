@@ -10,7 +10,8 @@
     {
       "numero": 1,
       "descricao": "Comece com um pedaço de papel quadrado. Dobre ao meio em noventa graus.",
-      "imagem": "tutorials/eagle/imgs/eagle-step-1.png"
+      "imagem": "tutorials/eagle/imgs/eagle-step-1.png",
+      "video": "tutorials/eagle/videos/eagle-step-1.mp4"
     }
 ]
 }
